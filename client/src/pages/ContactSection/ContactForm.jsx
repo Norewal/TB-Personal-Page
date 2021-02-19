@@ -49,6 +49,7 @@ const StyledButton= styled.input `
     background-color: ${theme.blue};
     width: 70%;
     border-radius: 3px;
+    border: 0;
     padding: 20px;
     margin: 0 auto 10px auto;
     display: block;

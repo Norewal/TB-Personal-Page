@@ -24,6 +24,7 @@ const StyledSubscribeEmail = styled.input`
     font-size: 18px;
     font-weight: 300;
     display: block;
+    border: 3px solid ${theme.green};
 
     &::placeholder {
         color: ${theme.blue};
@@ -48,7 +49,7 @@ const StyledSubscribeEmail = styled.input`
 const StyledSubscribeButton = styled.button`
     padding: 16px 33px;
     border-radius: 5px;
-    border: 2px solid ${theme.blue};
+    border: 2px solid ${theme.white};
     background-color: ${theme.white};
     color: ${theme.blue};
     font-family: "Gotham-Bold";
