@@ -9,6 +9,7 @@ import ContactSection from './pages/ContactSection/ContactSection';
 import ServiceLab from './pages/ServicesPage/ServiceLab';
 import ServiceEdu from './pages/ServicesPage/ServiceEdu';
 import Footer from './components/Footer/Footer';
+import ScrollToTop from './components/Scroll/ScrollToTop';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
     <div className="main">
       <div className="content">
         <Router>
+          <ScrollToTop />
           <MainNavBar />
     
           <Switch>
