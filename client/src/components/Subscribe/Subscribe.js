@@ -32,6 +32,7 @@ const StyledSubscribeEmail = styled.input`
 
     @media screen and (max-width: 480px) {
         margin-right: 0px;
+        margin-bottom: 10px;
         text-align: center;
         padding-left: 0px;
     }
