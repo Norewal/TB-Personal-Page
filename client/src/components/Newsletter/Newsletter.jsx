@@ -46,6 +46,7 @@ export default function Newsletter({fName, lName, email, handleOnChangeFName, ha
         <div>
             <SubscribeBox>
             {/* <h1>Hello {contact.fName}</h1>*/}
+                
                 <form
                     className="newsletter-form"
                     action="javascript:void(0)"

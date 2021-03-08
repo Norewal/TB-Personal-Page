@@ -12,6 +12,10 @@ import { Redirect } from 'react-router-dom';
 const AboutContainer = styled.div`
   display: flex;
 
+  @media only screen and (max-width: 730px) and (orientation: landscape){
+    display: inline;
+  }
+
   @media screen and (max-width: 600px) {
     display: inline;
   }
@@ -22,6 +26,12 @@ const AboutImg = styled.img`
   width: 50%;
   margin-top: 3px;
   box-shadow: rgba(0, 54, 166, 0.3) 0px 7px 29px 0px;
+
+  @media only screen and (max-width: 730px) and (orientation: landscape){
+    display: flex;
+    margin: 0 auto;
+    width: 70%;
+  }
 
   @media screen and (max-width: 600px) {
     width: 100%;
@@ -39,6 +49,11 @@ const AboutContent = styled.div`
     padding: 0 0 0 20px;
   }
 
+  @media only screen and (max-width: 730px) and (orientation: landscape){
+    margin-top: 30px;
+    padding: 0;
+  }
+
   @media screen and (max-width: 600px) {
     margin-top: 30px;
     padding: 0;
@@ -50,6 +65,12 @@ const StyledParagraph = styled.p`
 `;
 
 const StyledButtons = styled(Buttons)`
+
+  @media only screen and (max-width: 730px) and (orientation: landscape){
+    display: flex;
+    margin: 30px auto 50px;
+  }
+
   @media screen and (max-width: 600px) {
     display: flex;
     margin: 30px auto 50px;
@@ -58,8 +79,8 @@ const StyledButtons = styled(Buttons)`
 
 export default function About() {
   return (
-    <div id="about">
-      <Element name="aboutSection">
+    <section id="aboutSection">
+      <div>
         <ContainerBox>
           <Titles>About Me</Titles>
           <AboutContainer>
@@ -87,13 +108,13 @@ export default function About() {
                 content and hope you and your company will be able to make a
                 good use of it.
               </StyledParagraph>
-              <Link to="/about">
+              <Link to="/about" rel="noopener noreferrer">
                 <StyledButtons>Read more</StyledButtons>
               </Link>
             </AboutContent>
           </AboutContainer>
         </ContainerBox>
-      </Element>
-    </div>
+      </div>
+    </section>
   );
 }

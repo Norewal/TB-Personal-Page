@@ -30,13 +30,13 @@ export default function SocialIcons() {
         <div>
         <SocialIconsContainer>
             <SocialIcon>
-                <a href="mailto:tiborborsosdr@gmail.com" target="_blank" rel="noopener noreferrer">
-                    <FontAwesomeIcon icon={ faEnvelope } style={{color: 'white'}}/>
+                <a href="mailto:tiborborsosdr@gmail.com" aria-label="envelope" target="_blank" rel="noopener noreferrer">
+                    <FontAwesomeIcon icon={ faEnvelope } alt="envelopeIcon" style={{color: 'white'}}/>
                 </a>
             </SocialIcon>
             <SocialIcon>
-            <a href="https://www.linkedin.com/in/tibor-bors%C3%B3s-a301baab/" target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon icon={ faLinkedinIn } style={{color: 'white'}} />
+            <a href="https://www.linkedin.com/in/tibor-bors%C3%B3s-a301baab/" aria-label="linkedIn" target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={ faLinkedinIn } alt="linkedInIcon" style={{color: 'white'}} />
             </a>
             </SocialIcon>
         </SocialIconsContainer>

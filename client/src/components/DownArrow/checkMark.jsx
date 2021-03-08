@@ -16,10 +16,10 @@ const CheckMarkIcon = styled.div `
 
 export default function CheckMark() {
     return (
-        <div>
+        <>
             <CheckMarkIcon>
                 <FontAwesomeIcon icon={ faCheck } />
             </CheckMarkIcon>
-        </div>
+        </>
     )
 }

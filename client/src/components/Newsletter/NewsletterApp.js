@@ -66,7 +66,7 @@ class NewsletterApp extends Component {
         return (
             <div className="NewsletterApp">
                 <header className="newsletter-header">
-                    <p>Blablablabla</p>
+                    
                 </header>
                 <section className="newsletter-content">
                     <Newsletter 

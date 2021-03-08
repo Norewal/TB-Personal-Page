@@ -9,6 +9,7 @@ const DownContainer = styled.div`
     bottom: 10%;
     /*transition: translateX(-50%);  */
     transform: translate(-50%, -50%);
+    cursor: pointer;
 `;
 
 const scroll = keyframes`

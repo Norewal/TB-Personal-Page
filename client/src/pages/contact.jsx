@@ -5,9 +5,11 @@ import Layout from '../components/Layout';
 
 export default function ContactPage() {
   return (
-    <Layout>
-      <Helmet title="Tibor Borsos"></Helmet>
-      <ContactSection />
-    </Layout>
+    <section id="contactPage">
+      <Layout>
+        <Helmet title="Tibor Borsos"></Helmet>
+        <ContactSection />
+      </Layout>
+    </section>
   );
 }

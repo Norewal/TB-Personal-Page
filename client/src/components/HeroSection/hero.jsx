@@ -3,8 +3,8 @@ import styled from "styled-components";
 import Background from "../images/bg1-min.jpg";
 import { theme } from "../../theme";
 import { Element, scroller } from "react-scroll";
-import DownArrow from "../DownArrow/arrow";
 import ScrollDown from "../DownArrow/scrollDown";
+
 
 
 
@@ -27,16 +27,14 @@ const Content = styled.div `
     text-align: justify;
     text-justify: inter-word;
     
-    @media only screen and (min-width: 812px) and (max-width: 823px) and (orientation: landscape) {
-        height: 85vh;
+    @media only screen and (min-width: 731px) and (max-width: 940px) and (orientation: landscape) {
+        height: 82vh;
     }
-
-    @media only screen and (min-width: 731px) and (max-width: 736px) and (orientation: landscape) {
-        height: 85vh;
+    @media only screen and (max-width: 720px) and (orientation: landscape) {
+        height: 90vh;
     }
-
     @media only screen and (max-width: 667px) and (orientation: landscape) {
-        height: 80vh;
+        height: 100vh;
     }
 `;
 
@@ -53,15 +51,17 @@ const HeroContent = styled.div`
         padding-right: 100px;
     }
 
-    @media screen and (max-width: 480px) {
+    @media only screen and (min-width: 812px) and (max-width: 940px) and (orientation: landscape) {
+        padding-right: 0;
+    }
+
+    @media screen and (max-width: 768px) {
         margin: auto;
         padding: 0;
     } 
-    
-    @media only screen and (max-width: 667px) and (orientation: landscape) {
-        margin: auto;
-        padding: 0;
-        
+
+    @media only screen and (max-width: 730px) and (orientation: landscape) {
+        width: 90%;
     }
 `;
 
@@ -69,30 +69,33 @@ const Main = styled.h2 `
     margin-bottom: 20px;
     font-weight: bold;
 
-    @media only screen and (min-width: 812px) and (max-width: 823px) and (orientation: landscape) {
+    @media only screen and (min-width: 731px) and (max-width: 940px) and (orientation: landscape) {
         margin-bottom: 10px;
+        font-size: 18px;
     }
-
-    @media only screen and (max-width: 667px) and (orientation: landscape) {
-        font-size: 25px;
-        margin-bottom: 10px;
+    @media only screen and (max-width: 730px) and (orientation: landscape) {
+        font-size: 18px;
     }
 `;
 
 const HeroText = styled.h3 `
     line-height: 35px;
+    padding-bottom: 10px;
 
-    @media only screen and (min-width: 812px) and (max-width: 823px) and (orientation: landscape) {
-        line-height: 25px;
+    @media only screen and (min-width: 731px) and (max-width: 940px) and (orientation: landscape) {
+        line-height: 20px;
+        font-size: 14px;
+        padding-bottom: 5px;
+    }
+
+    @media only screen and (max-width: 730px) and (orientation: landscape) {
+        font-size: 14px;
+        line-height: 20px;
     }
 
     @media screen and (max-width: 480px) {
-        font-size: 15px;
-    }
-
-    @media only screen and (max-width: 667px) and (orientation: landscape) {
-        font-size: 14px;
-        line-height: 25px;
+        line-height: 20px;
+        font-size: 16px;
     }
     
 `;
@@ -100,6 +103,16 @@ const HeroText = styled.h3 `
 const SpamGreen = styled.span`
     color: ${theme.green};
     font-size: 30px;
+
+    @media only screen and (min-width: 731px) and (max-width: 940px) and (orientation: landscape) {
+        font-size: 20px;
+    }
+    @media only screen and (max-width: 730px) and (orientation: landscape) {
+        font-size: 20px;
+    }
+    @media screen and (max-width: 480px) {
+        font-size: 20px;
+    }
 `;
 
 const StyledLine = styled.hr`
@@ -113,19 +126,17 @@ const StyledLine = styled.hr`
     margin-top: 20px;
     left: 50%;
     transition: translateX(-50%); 
-
 `; */
 
 export default function Hero() {
 
-    const scrollToNextSection = () => {
+    /*const scrollToNextSection = () => {
         scroller.scrollTo("aboutSection", { smooth: true, duration: 1500 })
-    }
-
+    } */
 
     return (
         <>
-        <Element name="heroSection">
+        <section id="heroSection">
             <HeroStyles>
                 <Content>
                     <HeroContent>
@@ -135,19 +146,15 @@ export default function Hero() {
                         <br></br>
                         <StyledLine />
                         <br></br>
-                        <HeroText>I offer expertise to laboratories of pharmaceutical companies, universities, start-ups and CROs. </HeroText>
-                        <br></br>
-                        
+                        <HeroText>I offer expertise to laboratories of pharmaceutical companies, universities, start-ups and CROs. </HeroText>                       
                         <HeroText>My ”end-to-end” services include finding the best instrumentation to your needs, process planning, staff training, and much more!</HeroText>
                         {/*<DownArrowContainer onClick={scrollToNextSection}>
-                            <DownArrow />
+                            <ScrollDown />
                         </DownArrowContainer>*/}
-                        <ScrollDown />
                     </HeroContent>
-                    
                 </Content>
             </HeroStyles>
-        </Element>   
+        </section>   
         </>
     )
 }

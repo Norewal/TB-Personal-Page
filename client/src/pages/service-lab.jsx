@@ -69,45 +69,47 @@ const ServiceLabImg = styled.img`
 
 export default function ServiceLab() {
   return (
-    <Layout>
-      <ContainerBox>
-        <ServiceLabTitle>
-          <Titles>Services</Titles>
-        </ServiceLabTitle>
-        <Subtitle>Laboratory, technology and regulatory</Subtitle>
-        <ServiceLabContent>
-          <ServiceLabImg src={ServiceLabImage} alt="Laboratory" />
-          <ServiceLabPoint>
-            <CheckMark />
-            Providing remote or on-site expertise for GLP/GCP regulated bioanalytical studies.
-          </ServiceLabPoint>
-          <ServiceLabPoint>
-            <CheckMark />
-            Scientific review of contracts, pricing, lab metrics and KPIs.
-          </ServiceLabPoint>
-          <ServiceLabPoint>
-            <CheckMark />
-            Process review and development: get effective with speeding up workflows. 
-            Drafting, reviewing and updating policies, SOPs, forms and study plan/report templates.
-          </ServiceLabPoint>
-          <ServiceLabPoint>
-            <CheckMark />
-            Critical review of method development, validation and sample analysis study plans and reports.
-          </ServiceLabPoint>
-          <ServiceLabPoint>
-            <CheckMark />
-            Lab development, implementing new technologies: aiding the launch of new labs from sketch, setting up procedures.
-          </ServiceLabPoint>
-          <ServiceLabPoint>
-            <CheckMark />
-            Help with upgrading or purchasing labware: from URS writing to choosing the best fit to your needs.
-          </ServiceLabPoint>
-          <ServiceLabPoint>
-            <CheckMark />
-            Are you looking for a LIMS or an ELN (electronic laboratory notebook)? Or need help with CDISC data management? Contact me for help!
-          </ServiceLabPoint>
-        </ServiceLabContent>
-      </ContainerBox>
-    </Layout>
+    <section id="laboratoryPage">
+      <Layout>
+        <ContainerBox>
+          <ServiceLabTitle>
+            <Titles>Services</Titles>
+          </ServiceLabTitle>
+          <Subtitle>Laboratory, technology and regulatory</Subtitle>
+          <ServiceLabContent>
+            <ServiceLabImg src={ServiceLabImage} alt="Laboratory" />
+            <ServiceLabPoint>
+              <CheckMark />
+              Providing remote or on-site expertise for GLP/GCP regulated bioanalytical studies.
+            </ServiceLabPoint>
+            <ServiceLabPoint>
+              <CheckMark />
+              Scientific review of contracts, pricing, lab metrics and KPIs.
+            </ServiceLabPoint>
+            <ServiceLabPoint>
+              <CheckMark />
+              Process review and development: get effective with speeding up workflows. 
+              Drafting, reviewing and updating policies, SOPs, forms and study plan/report templates.
+            </ServiceLabPoint>
+            <ServiceLabPoint>
+              <CheckMark />
+              Critical review of method development, validation and sample analysis study plans and reports.
+            </ServiceLabPoint>
+            <ServiceLabPoint>
+              <CheckMark />
+              Lab development, implementing new technologies: aiding the launch of new labs from sketch, setting up procedures.
+            </ServiceLabPoint>
+            <ServiceLabPoint>
+              <CheckMark />
+              Help with upgrading or purchasing labware: from URS writing to choosing the best fit to your needs.
+            </ServiceLabPoint>
+            <ServiceLabPoint>
+              <CheckMark />
+              Are you looking for a LIMS or an ELN (electronic laboratory notebook)? Or need help with CDISC data management? Contact me for help!
+            </ServiceLabPoint>
+          </ServiceLabContent>
+        </ContainerBox>
+      </Layout>
+    </section>
   );
 }

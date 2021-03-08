@@ -66,6 +66,10 @@ const ServicePoint = styled.div`
   text-align: left;
   display: flex;
   margin: auto;
+
+  @media screen and (max-width: 320px) {
+    padding: 0 10px 10px;
+  }
 `;
 
 const ServiceContent = styled.p`
@@ -98,7 +102,7 @@ export default function Services() {
 
   return (
     <>
-      <Element name="servicesSection">
+      <section id="servicesSection">
         <ContainerBox>
           <Titles>Services</Titles>
           <ServicesContainer>
@@ -125,7 +129,7 @@ export default function Services() {
                   Microsoft Excel and Word training: master your spreadsheets and reports, and learn the basics of macro writing
                 </ServiceContent>
               </ServicePoint>
-              <Link to="/service-edu">
+              <Link to="/service-edu" rel="noopener noreferrer">
                 <StyledButtonsWhite>
                   Read more
                 </StyledButtonsWhite>
@@ -157,7 +161,7 @@ export default function Services() {
                   Drafting, reviewing and updating policies, SOPs, forms and study plan/report templates
                 </ServiceContent>
               </ServicePoint>              
-              <Link to="/service-lab">
+              <Link to="/service-lab" rel="noopener noreferrer">
                 <StyledButtonsWhite onClick={() => setClickLab(true)}>
                   Read more
                 </StyledButtonsWhite>
@@ -165,7 +169,7 @@ export default function Services() {
             </ServiceBox>
           </ServicesContainer>
         </ContainerBox>
-      </Element>
+      </section>
     </>
   );
 }

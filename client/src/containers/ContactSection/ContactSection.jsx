@@ -24,8 +24,9 @@ const ContactText = styled.div`
   }
 `;
 
-const StyledH3 = styled.h3`
+const StyledQuestion = styled.h2`
   color: ${theme.blue};
+  font-size: 22px;
   font-weight: 800;
   text-transform: uppercase;
 `;
@@ -41,20 +42,22 @@ const StyledP = styled.p`
 
 export default function ContactSection() {
   return (
-    <ContainerBox>
-      <Titles>Contact Me</Titles>
-      <StyledH3>Do you have any notes or queries?</StyledH3>
-      <ContactDetailsContainer>
-        <ContactText>
-          <StyledP>
-            I am more than happy to take your valuable suggestions related to
-            site content, improvements, as well as suggestions on any new
-            content, topics that would be of your interest.
-          </StyledP>
-        </ContactText>
-        <SocialIcons/>
-      </ContactDetailsContainer>
-      <Form />
-    </ContainerBox>
+    <section id="contactSection">
+      <ContainerBox>
+        <Titles>Contact Me</Titles>
+        <StyledQuestion>Do you have any notes or queries?</StyledQuestion>
+        <ContactDetailsContainer>
+          <ContactText>
+            <StyledP>
+              I am more than happy to take your valuable suggestions related to
+              site content, improvements, as well as suggestions on any new
+              content, topics that would be of your interest.
+            </StyledP>
+          </ContactText>
+          <SocialIcons/>
+        </ContactDetailsContainer>
+        <Form />
+      </ContainerBox>
+    </section>
   );
 }

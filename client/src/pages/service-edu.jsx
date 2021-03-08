@@ -69,46 +69,48 @@ const ServiceEduImg = styled.img`
 
 export default function ServiceEdu() {
   return (
-    <Layout>
-      <ContainerBox>
-        <ServiceEduTitle>
-          <Titles>Services</Titles>
-        </ServiceEduTitle>
-        <Subtitle>Scientific education and training</Subtitle>
-        <ServiceEduContent>
-          <ServiceEduImg src={ServiceEduImage} alt="Education" />
-          <ServiceEduPoint>
-            <CheckMark />
-            Develop and execute company training programmes (scientific and
-            regulatory).
-          </ServiceEduPoint>
-          <ServiceEduPoint>
-            <CheckMark />
-            Online and on-site trainings, tailored to your needs. 
-            Learn and gain practical skills at your own pace, whenever you want. 
-            Test your knowledge before receiving a certificate. 
-            Video trainings on various topics are coming this year!
-          </ServiceEduPoint>
-          <ServiceEduPoint>
-            <CheckMark />
-            Provide insights into the basics of nonclinical and clinical research, including pharmacokinetics and PK calculations.
-          </ServiceEduPoint>
-          <ServiceEduPoint>
-            <CheckMark />
-            Microsoft Excel and Word training: most people who believe they are good at Office can still learn a lot, 
-            making their work way more effective. Master your spreadsheets and reports!
-          </ServiceEduPoint>
-          <ServiceEduPoint>
-            <CheckMark />
-            Basic level macro writing training: if you are to start macro writing on your own, for your own tasks, then I can also help you with that. 
-            The best way to start preparing your own forms and templates.
-          </ServiceEduPoint>
-          <ServiceEduPoint>
-            <CheckMark />
-            Are you a young scientist, looking for a job? I can prepare you for job interviews while reviewing your CV.
-          </ServiceEduPoint>
-        </ServiceEduContent>
-      </ContainerBox>
-    </Layout>
+    <section id="educationPage">
+      <Layout>
+        <ContainerBox>
+          <ServiceEduTitle>
+            <Titles>Services</Titles>
+          </ServiceEduTitle>
+          <Subtitle>Scientific education and training</Subtitle>
+          <ServiceEduContent>
+            <ServiceEduImg src={ServiceEduImage} alt="Education" />
+            <ServiceEduPoint>
+              <CheckMark />
+              Develop and execute company training programmes (scientific and
+              regulatory).
+            </ServiceEduPoint>
+            <ServiceEduPoint>
+              <CheckMark />
+              Online and on-site trainings, tailored to your needs. 
+              Learn and gain practical skills at your own pace, whenever you want. 
+              Test your knowledge before receiving a certificate. 
+              Video trainings on various topics are coming this year!
+            </ServiceEduPoint>
+            <ServiceEduPoint>
+              <CheckMark />
+              Provide insights into the basics of nonclinical and clinical research, including pharmacokinetics and PK calculations.
+            </ServiceEduPoint>
+            <ServiceEduPoint>
+              <CheckMark />
+              Microsoft Excel and Word training: most people who believe they are good at Office can still learn a lot, 
+              making their work way more effective. Master your spreadsheets and reports!
+            </ServiceEduPoint>
+            <ServiceEduPoint>
+              <CheckMark />
+              Basic level macro writing training: if you are to start macro writing on your own, for your own tasks, then I can also help you with that. 
+              The best way to start preparing your own forms and templates.
+            </ServiceEduPoint>
+            <ServiceEduPoint>
+              <CheckMark />
+              Are you a young scientist, looking for a job? I can prepare you for job interviews while reviewing your CV.
+            </ServiceEduPoint>
+          </ServiceEduContent>
+        </ContainerBox>
+      </Layout>
+    </section>
   );
 }

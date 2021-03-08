@@ -1,13 +1,11 @@
 .main {
-    position: relative;
+  position: relative;
 }
 .content {
-    flex: 1 0 auto;
-    margin-bottom: 150px;
-    
+  flex: 1 0 auto;
+  margin-bottom: 0px;
 }
 
 .footer {
-    flex-shrink: 0;
-    
+  flex-shrink: 0;
 }

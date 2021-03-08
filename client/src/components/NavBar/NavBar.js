@@ -25,7 +25,7 @@ const NavBarContainer = styled.div`
   }
 `;
 
-const NavItem = styled.div`
+const NavItem = styled.li`
   display: flex;
   align-items: center;
   height: 80px;
@@ -62,7 +62,7 @@ function MainNavBar() {
   };
 
   return (
-    <>
+    <nav>
       <NavBarContainer>
         <Link to="/" style={{ textDecoration: 'none' }}>
           <Logo />
@@ -88,9 +88,9 @@ function MainNavBar() {
           <NavItem onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
             <Link to="/services" className="nav-links" onClick={closeMobileMenu}>
               Services
-              <FontAwesomeIcon
+              <FontAwesomeIcon 
                 icon={faAngleDown}
-                style={{ marginLeft: '10px' }}
+                style={{ marginLeft: '10px', display: window.innerWidth < 960 ? "none" : "inline"}}
               />
             </Link>
             {dropdown && <Dropdown />}
@@ -107,7 +107,7 @@ function MainNavBar() {
           </NavItem>
         </ul>
       </NavBarContainer>
-    </>
+    </nav>
   );
 }
 

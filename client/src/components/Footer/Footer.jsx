@@ -70,6 +70,7 @@ export default function Footer() {
 
 
     return (
+        <footer>
         <FooterContainer>
             <FirstPart>
                 <FooterLogo />
@@ -78,8 +79,9 @@ export default function Footer() {
             <CopyRight>
                 <FontAwesomeIcon icon={ faCopyright } style={{color: "rgba(255, 255, 255, 0.5"}} /> 
                 <p style={{color: "rgba(255, 255, 255, 0.5", marginLeft: "5px"}}>{currentYear}</p>
-                <CopyRightText  href="https://www.gabriellajs.digital/" target="_blank"> gabriellaJS</CopyRightText>
+                <CopyRightText  href="https://www.gabriellajs.digital/" target="_blank" rel="noopener noreferrer"> gabriellaJS</CopyRightText>
             </CopyRight>
         </FooterContainer>
+    </footer>
     )
 }

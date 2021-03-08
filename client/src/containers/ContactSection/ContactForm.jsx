@@ -11,6 +11,17 @@ const ContactForm = styled.form`
   flex-direction: column;
 `;
 
+const ContactFormHeader = styled.div`
+  display: flex; 
+  flex-direction: row;
+  justify-content: space-between;
+
+  @media screen and (max-width: 540px) {
+    flex-direction: column;
+  }
+`;
+const ContactFormBody = styled.div``;
+
 const StyledInput = styled.input`
   border: 3px solid ${theme.green};
   background-color: ${theme.white};
@@ -23,8 +34,11 @@ const StyledInput = styled.input`
   color: ${theme.blue};
   font-weight: 300;
 
+  &:first-child {
+    margin-right: 5px;
+  } 
   @media screen and (max-width: 540px) {
-    width: 100%;
+    margin: 5px 0;
   }
 `;
 
@@ -42,12 +56,13 @@ const StyledTextArea = styled.textarea`
 
   @media screen and (max-width: 540px) {
     width: 100%;
+    margin: 10px 0;
   }
 `;
 
 const ButtonContainer = styled.div`
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 `;
 
 const StyledButton = styled.input`
@@ -101,23 +116,22 @@ export default function Form() {
 
   return (
     <ContactForm onSubmit={sendEmail}>
-      <input
-        className="input"
-        type="hidden"
-        name="contact_number"
-        placeholder="Name"
-      />
-
-      <StyledInput type="text" name="name" placeholder="Name" required />
-      <StyledInput type="text" name="subject" placeholder="Subject" required />
-      <StyledInput type="email" name="email" placeholder="Email" required />
-
-      <StyledTextArea
-        name="message"
-        placeholder="Message"
-        rows="10"
-        required
-      />
+      {/* <input className="input" type="hidden" name="contact_number"placeholder="Name" /> */}
+      <ContactFormHeader>
+          <StyledInput type="text" name="name" placeholder="Name" aria-label = "Name" required />
+          <StyledInput type="email" name="email" placeholder="Email" aria-label = "Email" required />
+      </ContactFormHeader>
+      <ContactFormBody>
+          <StyledInput type="text" name="subject" placeholder="Subject" aria-label = "Subject" required />
+          <StyledTextArea
+            name="message"
+            placeholder="Message"
+            aria-label = "Message"
+            rows="10"
+            required
+          />
+    
+      </ContactFormBody>
       <ButtonContainer>
         <StyledButton type="submit" value="Let's talk" />
       </ButtonContainer>
