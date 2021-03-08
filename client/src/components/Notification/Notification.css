@@ -1,0 +1,45 @@
+.notification {
+    border-radius: 4px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.9s, visibility 0.9s;
+}
+
+.notification.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.notification.success {
+    background: green;
+}
+
+.notification.warning {
+    background: #d87701;
+}
+
+.notification.danger {
+    background-color: red;
+}
+
+.notification img {
+    justify-self: center;
+    align-self: center;
+    width: 40px;
+    margin-right: 10px;
+}
+
+.notification p {
+    color: var(--black);
+    font-weight: 500;
+    align-self: center;
+    padding-right: 10px;
+}
+
+.notification:hover {
+    border-color: var(--black);
+}

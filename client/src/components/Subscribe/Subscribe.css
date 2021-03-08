@@ -1,0 +1,45 @@
+.subscribe {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.subscribe-email {
+    height: 50px;
+    width: 400px;
+    margin-right: 10px;
+    border-radius: 4px;
+    background-color: black;
+    border: 1px solid white;
+    color: red;
+    font-size: 16px;
+}
+
+.subscribe-email::placeholder {
+    color: yellow;
+}
+
+.subscribe-email:focus,
+:hover {
+    border-color:blueviolet;
+}
+
+.subscribe-button {
+    height: 50px;
+    background-color: green;
+    color: white;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+}
+
+.subscribe-button:hover,
+.subscribe-button:focus {
+    outline: none;
+    filter: brightness(85%);
+}
