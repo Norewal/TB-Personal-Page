@@ -34,13 +34,14 @@ const Title = styled.h1 `
     }
 `;
 
+
+
 export default function Titles(props) {
     return (
         <div>
             <TitleContainer>
                 <Title {...props}>{props.children}</Title>
             </TitleContainer>
-            
         </div>
     )
 }

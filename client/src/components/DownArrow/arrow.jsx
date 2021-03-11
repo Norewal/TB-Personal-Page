@@ -22,7 +22,6 @@ const ArrowContainer = styled.div `
         cursor: pointer;
         transition: all 250ms ease-in-out;
     }
-
 `;
 
 const ArrowIcon = styled.div `

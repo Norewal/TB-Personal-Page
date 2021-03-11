@@ -9,8 +9,10 @@ import {
   faBars,
   faTimes,
 } from '@fortawesome/free-solid-svg-icons';
-import './NavBar.css';0
+import './NavBar.css';
 import Dropdown from './DropDown';
+
+
 
 const NavBarContainer = styled.div`
   background: ${theme.black};
@@ -35,6 +37,8 @@ const NavItem = styled.li`
     padding-top: 40px;
   }
 `;
+
+
 
 function MainNavBar() {
   //states

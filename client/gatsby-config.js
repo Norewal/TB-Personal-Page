@@ -1,8 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Tibor Borsos`,
-    description: `Personal Page`,
-    author: `gjs`,
+    title: "Tibor Borsos",
+    description: "Personal Page",
+    keywords: "bioanalysis, biobey, LC-MC, laboratory, education, pharmaceutic",
+    image: "/logo.svg",
+    url: "https://www.tiborborsos.com",
+    author: "Tibor Borsos"
   },
   plugins: [
     `gatsby-plugin-styled-components`,
@@ -11,7 +14,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/components/images`,
+        path: `${__dirname}/src/images`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -21,7 +24,7 @@ module.exports = {
       options: {
         name: `gatsby-starter-default`,
         short_name: `starter`,
-        start_url: `/`,
+        start_url: `https://www.tiborborsos.com`,
         //background_color: `#663399`,
         //theme_color: `#663399`,
         display: `minimal-ui`,
@@ -29,6 +32,13 @@ module.exports = {
       },
     },
     `gatsby-plugin-gatsby-cloud`,
+    {
+      resolve: 'gatsby-plugin-html-attributes',
+      options: {
+        lang: 'en'
+      }
+    },
+    `gatsby-plugin-open-graph-images`
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

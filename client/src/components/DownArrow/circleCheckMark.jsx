@@ -5,6 +5,7 @@ import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
+
 const CheckMarkIcon = styled.div `
     color: ${theme.secondary};
     font-size: 20px;
@@ -15,12 +16,10 @@ const CheckMarkIcon = styled.div `
 
 export default function CircleCheckMark() {
     return (
-        <div>
-            
-                <CheckMarkIcon>
-                    <FontAwesomeIcon icon={ faCheckCircle } />
-                </CheckMarkIcon>
-            
-        </div>
+        <>
+            <CheckMarkIcon>
+                <FontAwesomeIcon icon={ faCheckCircle } />
+            </CheckMarkIcon>
+        </>
     )
 }

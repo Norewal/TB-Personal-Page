@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import Description from "../Notification/Description";
 import Subscribe from "./Subscribe";
-import check from "../images/check-mark.svg";
-import exclamation from "../images/exclamation.svg";
-import xmark from "../images/x-mark.svg";
+import check from "../../images/check-mark.svg";
+import exclamation from "../../images/exclamation.svg";
+import xmark from "../../images/x-mark.svg";
 
 class SubscribeForm extends Component {
 

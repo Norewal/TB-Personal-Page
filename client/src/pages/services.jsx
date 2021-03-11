@@ -1,11 +1,12 @@
 import React from 'react';
 import Services from '../containers/ServicesPage/Services';
-import BioBey from '../containers/BioBey/BioBey'
 import Layout from '../components/Layout';
+import SEO from "../components/seo";
 
 export default function ServicesPage() {
   return (
     <Layout>
+    <SEO title="Services" />
       <Services />
     </Layout>
   );

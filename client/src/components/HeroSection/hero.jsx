@@ -1,22 +1,19 @@
 import React from 'react'
 import styled from "styled-components";
-import Background from "../images/bg1-min.jpg";
 import { theme } from "../../theme";
-import { Element, scroller } from "react-scroll";
-import ScrollDown from "../DownArrow/scrollDown";
+/*import { Element, scroller } from "react-scroll";
+import ScrollDown from "../DownArrow/scrollDown";*/
+import { graphql, useStaticQuery } from 'gatsby';
+import BackgroundImage from 'gatsby-background-image';
 
 
 
-
-const HeroStyles = styled.div `
+const Overlay = styled.div `
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 100%;
     width: 100%;
-    /*height: 90vh; */
-    padding: 0;
-    background-image: url(${Background});
-    background-position: center;
-    background-size: cover;
-    background-color: rgba(10, 53 53, 0.9);
-    position: relative; 
+    align-items: center;
+    color: white;
 `;
 
 const Content = styled.div `
@@ -128,32 +125,52 @@ const StyledLine = styled.hr`
     transition: translateX(-50%); 
 `; */
 
+
+
 export default function Hero() {
 
     /*const scrollToNextSection = () => {
         scroller.scrollTo("aboutSection", { smooth: true, duration: 1500 })
     } */
 
+    const data = useStaticQuery(graphql`
+        query {
+            backgroundImage: file(relativePath: {eq: "bgMin.jpg"}) {
+                childImageSharp {
+                    fluid {
+                    ...GatsbyImageSharpFluid
+                    }
+                }
+            }
+        }
+    ` )
+
     return (
         <>
         <section id="heroSection">
-            <HeroStyles>
-                <Content>
-                    <HeroContent>
-                        <Main>Welcome to my personal page!</Main>
-                        <HeroText>I am <SpamGreen>Tibor Borsos</SpamGreen>, </HeroText>
-                        <HeroText>the creator and owner of <span style={{ fontWeight: "bold"}}>BioBey</span>, a consultancy specialising in <span style={{ fontWeight: "bold"}}>training</span> and supporting <span style={{ fontWeight: "bold"}}>analytical labs</span>, especially in the field of <span style={{ fontWeight: "bold"}}>LC-MC</span> bioanalysis</HeroText>
-                        <br></br>
-                        <StyledLine />
-                        <br></br>
-                        <HeroText>I offer expertise to laboratories of pharmaceutical companies, universities, start-ups and CROs. </HeroText>                       
-                        <HeroText>My ”end-to-end” services include finding the best instrumentation to your needs, process planning, staff training, and much more!</HeroText>
-                        {/*<DownArrowContainer onClick={scrollToNextSection}>
-                            <ScrollDown />
-                        </DownArrowContainer>*/}
-                    </HeroContent>
-                </Content>
-            </HeroStyles>
+            <BackgroundImage 
+                fluid={data.backgroundImage.childImageSharp.fluid}
+                fadeIn
+                style={{height: "100vh", width: "100%"}}
+            >
+                <Overlay>
+                    <Content>
+                        <HeroContent>
+                            <Main>Welcome to my personal page!</Main>
+                            <HeroText>I am <SpamGreen>Tibor Borsos</SpamGreen>, </HeroText>
+                            <HeroText>the creator and owner of <span style={{ fontWeight: "bold"}}>BioBey</span>, a consultancy specialising in <span style={{ fontWeight: "bold"}}>training</span> and supporting <span style={{ fontWeight: "bold"}}>analytical labs</span>, especially in the field of <span style={{ fontWeight: "bold"}}>LC-MC</span> bioanalysis</HeroText>
+                            <br></br>
+                            <StyledLine />
+                            <br></br>
+                            <HeroText>I offer expertise to laboratories of pharmaceutical companies, universities, start-ups and CROs. </HeroText>                       
+                            <HeroText>My ”end-to-end” services include finding the best instrumentation to your needs, process planning, staff training, and much more!</HeroText>
+                            {/*<DownArrowContainer onClick={scrollToNextSection}>
+                                <ScrollDown />
+                            </DownArrowContainer>*/}
+                        </HeroContent>
+                    </Content>
+                </Overlay>
+            </BackgroundImage>
         </section>   
         </>
     )

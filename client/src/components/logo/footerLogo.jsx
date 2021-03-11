@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from "styled-components";
-import LogoFooter from "../../components/images/logo-f.svg";
+import LogoFooter from "../../images/logo.svg";
 import { theme } from "../../theme";
 
 

@@ -3,9 +3,9 @@ import styled from 'styled-components'
 import ButtonsWhite from '../../components/buttons/WhiteButton'
 import validator from "validator";
 import PropTypes from "prop-types";
-
-
 import { theme } from '../../theme'
+
+
 
 const SubscribeBox = styled.div `
     margin: 0 auto;
@@ -39,6 +39,8 @@ const StyledButtonsWhite = styled(ButtonsWhite)`
         width: 100%;
     }
 `;
+
+
 
 export default function Newsletter({fName, lName, email, handleOnChangeFName, handleOnChangeLName, handleOnChangeEmail, handleSendFName, handleSendLName, handleSendEmail}) {
 

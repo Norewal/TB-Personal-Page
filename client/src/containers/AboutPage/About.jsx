@@ -2,12 +2,11 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 import Titles from '../../components/Titles/Titles';
-import AboutImage from '../../components/images/about.jpg';
 import { theme } from '../../theme';
-import { Element } from 'react-scroll';
 import Buttons from '../../components/buttons/Buttons';
 import ContainerBox from '../../components/container/container';
-import { Redirect } from 'react-router-dom';
+import { graphql, useStaticQuery } from 'gatsby';
+import Img from 'gatsby-image';
 
 const AboutContainer = styled.div`
   display: flex;
@@ -21,9 +20,10 @@ const AboutContainer = styled.div`
   }
 `;
 
-const AboutImg = styled.img`
-  height: 10%;
-  width: 50%;
+const ImageContainer = styled.div`
+  height: 100%;
+  width: 100%;
+  flex: 1;
   margin-top: 3px;
   box-shadow: rgba(0, 54, 166, 0.3) 0px 7px 29px 0px;
 
@@ -37,13 +37,14 @@ const AboutImg = styled.img`
     width: 100%;
     margin: 0;
   }
-`;
+`; 
 
 const AboutContent = styled.div`
   color: ${theme.black};
   padding: 0 0 0 50px;
   text-align: justify;
   text-justify: inter-word;
+  flex: 1;
 
   @media screen and (max-width: 768px) {
     padding: 0 0 0 20px;
@@ -78,13 +79,32 @@ const StyledButtons = styled(Buttons)`
 `;
 
 export default function About() {
+
+  const data = useStaticQuery(graphql`
+        query {
+          about: file(relativePath: {eq: "about.jpg"}) {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+    ` )
+
   return (
     <section id="aboutSection">
-      <div>
+      <div> 
         <ContainerBox>
+        
           <Titles>About Me</Titles>
           <AboutContainer>
-            <AboutImg src={AboutImage} alt="profile-pic" />
+            <ImageContainer>
+              <Img 
+                fluid={data.about.childImageSharp.fluid}
+                alt="profile picture"
+              />  
+            </ImageContainer>
             <AboutContent>
               <StyledParagraph>
                 I am a chemist with over 13 years of experience in analytical

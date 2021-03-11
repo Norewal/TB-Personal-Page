@@ -1,15 +1,12 @@
 import React, { useState } from 'react';
 import Titles from '../../components/Titles/Titles';
 import { theme } from '../../theme';
-import { Element } from 'react-scroll';
 import ContainerBox from '../../components/container/container';
 import styled from 'styled-components';
-import EducationImg from '../../components/images/main1-min.jpg';
-import LaboratoryImg from '../../components/images/main2-min.jpg';
 import CheckMark from '../../components/DownArrow/checkMark';
 import ButtonsWhite from '../../components/buttons/WhiteButton';
-import { Redirect } from 'react-router-dom';
-import { Link } from 'gatsby';
+import { Link, graphql, useStaticQuery  } from 'gatsby';
+import Img from 'gatsby-image';
 
 import Aos from 'aos';
 import 'aos/dist/aos.css';
@@ -48,7 +45,7 @@ const ServiceBox = styled.div`
   }
 `;
 
-const ServiceImg = styled.img`
+const ImageContainer = styled.div`
   width: 100%;
 `;
 
@@ -100,6 +97,26 @@ export default function Services() {
     return <Redirect to="/serviceLab" />;
   }
 
+
+  const data = useStaticQuery(graphql`
+    query {
+      serviceMainLaboratory: file(relativePath: {eq: "main2-min.jpg"}) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      serviceMainEducation: file(relativePath: {eq: "main1-min.jpg"}) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <>
       <section id="servicesSection">
@@ -107,7 +124,12 @@ export default function Services() {
           <Titles>Services</Titles>
           <ServicesContainer>
             <ServiceBox>
-              <ServiceImg src={EducationImg} alt="Homepage Education Image" />
+              <ImageContainer>
+                <Img 
+                  fluid={data.serviceMainEducation.childImageSharp.fluid}
+                  alt="Services: Laboratory"
+                />
+              </ImageContainer>
               <ServiceTitle>Scientific education</ServiceTitle>
 
               <ServicePoint>
@@ -139,7 +161,12 @@ export default function Services() {
 
 
             <ServiceBox>
-              <ServiceImg src={LaboratoryImg} alt="Homepage Laboratory Image" />
+              <ImageContainer>
+                <Img 
+                    fluid={data.serviceMainLaboratory.childImageSharp.fluid}
+                    alt="Services: Laboratory"
+                  />
+              </ImageContainer>
               <ServiceTitle>Laboratory and regulatory</ServiceTitle>
 
               <ServicePoint>
@@ -160,9 +187,9 @@ export default function Services() {
                   Process review and development: get effective with speeding up workflows.
                   Drafting, reviewing and updating policies, SOPs, forms and study plan/report templates
                 </ServiceContent>
-              </ServicePoint>              
+              </ServicePoint>             
               <Link to="/service-lab" rel="noopener noreferrer">
-                <StyledButtonsWhite onClick={() => setClickLab(true)}>
+                <StyledButtonsWhite>
                   Read more
                 </StyledButtonsWhite>
               </Link>

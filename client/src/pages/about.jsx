@@ -6,6 +6,7 @@ import Titles from '../components/Titles/Titles';
 import AboutCard from '../containers/AboutPage/AboutCard';
 import aboutTimeLine from '../containers/AboutPage/AboutData';
 import Layout from '../components/Layout';
+import SEO from "../components/seo";
 
 const About = styled.div``;
 
@@ -78,6 +79,7 @@ export default function AboutLong() {
   return (
     <section id="aboutPage">
       <Layout>
+        <SEO title="About Me" description="I am a chemist with strong IT skills who has over 13 years of experience in analytical chemistry. I am a really fortunate person as I had the chance to work with and gain knowledge on quite a broad range of tasks and instrumentation related to pharmaceutical R&D, preclinical and clinical studies, including GMP, GLP and GCP regulated areas." />
         <About>
           <ContainerBox>
             <AboutLongTitle>

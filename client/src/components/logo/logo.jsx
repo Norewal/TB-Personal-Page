@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from "styled-components";
-import LogoWhite from "../images/logo-w.svg";
+import LogoWhite from "../../images/logo.svg";
 import LogoFrame from "../logo/footerLogo";
 import { theme } from "../../theme";
 

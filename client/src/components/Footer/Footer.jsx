@@ -7,6 +7,7 @@ import styled from 'styled-components';
 import FooterLogo from '../logo/footerLogo';
 
 
+
 const FooterContainer = styled.div`
     position: absolute;
     width: 100%;
@@ -21,7 +22,6 @@ const FooterContainer = styled.div`
     @media screen and (max-width: 320px) {
         padding: 2rem;      
     }
-
 `;
 
 const FirstPart = styled.div`
@@ -63,11 +63,9 @@ const CopyRightText = styled.a`
 `;
 
 
+
 export default function Footer() {
-
     const currentYear = new Date().getFullYear();
-
-
 
     return (
         <footer>

@@ -2,8 +2,8 @@ import React from 'react';
 import { Link } from "gatsby"
 import styled from 'styled-components';
 import { theme } from '../theme';
-import Background from "../components/images/404-2-min.jpg";
-import SmallBackground from "../components/images/404-small.jpg";
+import Background from "../images/404-2-min.jpg";
+import SmallBackground from "../images/404-small.jpg";
 
 
 
