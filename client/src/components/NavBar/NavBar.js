@@ -12,8 +12,6 @@ import {
 import './NavBar.css';
 import Dropdown from './DropDown';
 
-
-
 const NavBarContainer = styled.div`
   background: ${theme.black};
   height: 80px;
@@ -37,8 +35,6 @@ const NavItem = styled.li`
     padding-top: 40px;
   }
 `;
-
-
 
 function MainNavBar() {
   //states
@@ -90,11 +86,15 @@ function MainNavBar() {
             </Link>
           </NavItem>
           <NavItem onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
-            <Link to="/services" className="nav-links" onClick={closeMobileMenu}>
+            <Link
+              to="/services"
+              className="nav-links"
+              onClick={closeMobileMenu}
+            >
               Services
-              <FontAwesomeIcon 
+              <FontAwesomeIcon
                 icon={faAngleDown}
-                style={{ marginLeft: '10px', display: window.innerWidth < 960 ? "none" : "inline"}}
+                style={{ marginLeft: '10px' }}
               />
             </Link>
             {dropdown && <Dropdown />}

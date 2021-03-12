@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: "Tibor Borsos",
-    description: "Personal Page",
-    keywords: "bioanalysis, biobey, LC-MC, laboratory, education, pharmaceutic",
-    image: "/logo.svg",
-    url: "https://www.tiborborsos.com",
-    author: "Tibor Borsos"
+    title: 'Tibor Borsos',
+    description: 'Personal Page',
+    keywords: 'bioanalysis, biobey, LC-MC, laboratory, education, pharmaceutic',
+    image: '/logo.svg',
+    url: 'https://www.tiborborsos.com',
+    author: 'Tibor Borsos',
   },
   plugins: [
     `gatsby-plugin-styled-components`,
@@ -35,10 +35,10 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-html-attributes',
       options: {
-        lang: 'en'
-      }
+        lang: 'en',
+      },
     },
-    `gatsby-plugin-open-graph-images`
+    // `gatsby-plugin-open-graph-images`
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
