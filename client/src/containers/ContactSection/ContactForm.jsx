@@ -95,10 +95,10 @@ export default function Form() {
 
     emailjs
       .sendForm(
-        process.env.REACT_APP_SERVICE_ID,
-        process.env.REACT_APP_TEMPLATE_ID,
+        process.env.GATSBY_SERVICE_ID,
+        process.env.GATSBY_TEMPLATE_ID,
         e.target,
-        process.env.REACT_APP_USER_ID
+        process.env.GATSBY_USER_ID
       )
 
       .then(
