@@ -90,7 +90,7 @@ class Subscribe extends Component {
         
         //this is from backend
         if (this.state.email) {
-            fetch(`/api/memberAdd?email=${this.state.email}`)
+            fetch(`https://tb-personal-page.herokuapp.com/api/memberAdd?email=${this.state.email}`)
             .then(res => res.json())
             .then(json => {
                 if (json.status === "subscribed") {
