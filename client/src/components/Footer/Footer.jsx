@@ -12,7 +12,7 @@ const FooterContainer = styled.div`
     position: absolute;
     width: 100%;
     /*bottom: 0;*/
-    background-color: ${theme.darkblue};
+    background-color: ${theme.black};
     padding: 1rem 0;
 
     @media screen and (max-width: 960px) {
@@ -62,6 +62,10 @@ const CopyRightText = styled.a`
     }
 `;
 
+const CurrentYear = styled.p`
+    color: rgba(255, 255, 255, 0.5);
+    margin-left: 5px;
+`;
 
 
 export default function Footer() {
@@ -76,7 +80,7 @@ export default function Footer() {
             </FirstPart>
             <CopyRight>
                 <FontAwesomeIcon icon={ faCopyright } style={{color: "rgba(255, 255, 255, 0.5"}} /> 
-                <p style={{color: "rgba(255, 255, 255, 0.5", marginLeft: "5px"}}>{currentYear}</p>
+                <CurrentYear>{currentYear}</CurrentYear>
                 <CopyRightText  href="https://www.gabriellajs.digital/" target="_blank" rel="noopener noreferrer"> gabriellaJS</CopyRightText>
             </CopyRight>
         </FooterContainer>

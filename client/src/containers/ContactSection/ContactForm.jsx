@@ -9,6 +9,10 @@ const ContactForm = styled.form`
   display: flex;
   justify-content: center;
   flex-direction: column;
+
+  @media screen and (max-width: 550px) {
+    margin-top: 50px;
+  }
 `;
 
 const ContactFormHeader = styled.div`
@@ -16,15 +20,17 @@ const ContactFormHeader = styled.div`
   flex-direction: row;
   justify-content: space-between;
 
-  @media screen and (max-width: 540px) {
+  @media screen and (max-width: 550px) {
     flex-direction: column;
   }
 `;
 const ContactFormBody = styled.div``;
 
 const StyledInput = styled.input`
-  border: 3px solid ${theme.green};
+  /*border: 3px solid ${theme.green};*/
   background-color: ${theme.white};
+  box-shadow: rgba(0, 40, 123, 0.3) 0px 1px 5px 0px;
+  border: none;
   width: 100%;
   border-radius: 3px;
   padding: 10px 15px;
@@ -37,14 +43,21 @@ const StyledInput = styled.input`
   &:first-child {
     margin-right: 5px;
   } 
-  @media screen and (max-width: 540px) {
+
+  &:focus {
+    outline-color: ${theme.green};
+  }
+
+  @media screen and (max-width: 550px) {
     margin: 5px 0;
   }
 `;
 
 const StyledTextArea = styled.textarea`
-  border: 3px solid ${theme.green};
+  /*border: 3px solid ${theme.green};*/
   background-color: ${theme.white};
+  box-shadow: rgba(0, 40, 123, 0.3) 0px 1px 5px 0px;
+  border: none;
   width: 100%;
   border-radius: 3px;
   padding: 10px 15px;
@@ -53,8 +66,13 @@ const StyledTextArea = styled.textarea`
   font-size: 15px;
   color: ${theme.blue};
   font-weight: 300;
+  font-family: Gotham-Light;
 
-  @media screen and (max-width: 540px) {
+  &:focus {
+    outline-color: ${theme.green};
+  }
+
+  @media screen and (max-width: 550px) {
     width: 100%;
     margin: 10px 0;
   }
@@ -84,7 +102,7 @@ const StyledButton = styled.input`
     background-color: ${theme.green};
   }
 
-  @media screen and (max-width: 540px) {
+  @media screen and (max-width: 550px) {
     width: 100%;
   }
 `;

@@ -39,11 +39,9 @@ const CardRight = styled.div`
     border-radius: 5px;
     align-items: center;
     justify-content: center;
-    margin: 120px 0 0;
     
     @media screen and (max-width: 480px) {
         width: 95%;
-        margin: 30px 0 0;
         padding: 0 15px 0 0px;
     }
 `;
@@ -60,13 +58,13 @@ const AboutTitle = styled.div`
 `;
 
 const AboutContent = styled.div`
-    padding: 0px 0 0px;
+    padding: 0px 0 20px;
     text-align: justify;
     text-justify: inter-word;
 
     @media screen and (max-width: 480px) {
         font-size: 14px;
-        padding: 0;
+        padding: 0px 0 10px;
     }
 `;
 
@@ -118,7 +116,9 @@ export default function AboutCard(props) {
                 <ContentBox>
                     <AboutTitle>{props.title}</AboutTitle>
                     <AboutContent>{props.description1}</AboutContent>
-                    <AboutContent style={{paddingTop: "20px"}}>{props.description3}</AboutContent>
+                    <AboutContent>{props.description2}</AboutContent>
+                    <AboutContent>{props.description3}</AboutContent>
+                    <AboutContent>{props.description4}</AboutContent>
                 </ContentBox>
             </CardLeft>
             
@@ -137,8 +137,6 @@ export default function AboutCard(props) {
             </BulletPoint>
             
             <CardRight>
-                <AboutContent>{props.description2}</AboutContent>
-                <AboutContent>{props.description4}</AboutContent>
             </CardRight>
         </Card>
         </>

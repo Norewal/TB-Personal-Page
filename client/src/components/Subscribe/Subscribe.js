@@ -24,10 +24,15 @@ const StyledSubscribeEmail = styled.input`
     font-size: 18px;
     font-weight: 300;
     display: block;
-    border: 3px solid ${theme.green};
+    /*border: 2px solid ${theme.green}; */
+    border: none;
 
     &::placeholder {
         color: ${theme.blue};
+    }
+
+    &:focus {
+        outline-color: ${theme.green};
     }
 
     @media screen and (max-width: 480px) {

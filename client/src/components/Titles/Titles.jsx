@@ -15,6 +15,7 @@ const TitleContainer = styled.div `
     justify-content: center;
 
     @media screen and (max-width: 480px) {
+        margin-top: 30px;
         margin-bottom: 50px;  
         text-align: center;  
     }

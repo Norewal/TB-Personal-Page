@@ -10,14 +10,21 @@ import { Link } from 'gatsby';
 const StyledTitle = styled.h1`
   display: flex;
   justify-content: center;
+  font-size: 32px;
   margin: 0px auto 50px;
   align-content: center;
   color: ${theme.white};
+
+  @media screen and (max-width: 550px) {
+    display: inherit;
+    margin-bottom: 50px;
+    text-align: center;
+  }
 `;
 
 const StyledSpan = styled.span`
   font-weight: 800;
-  padding-left: 10px;
+  white-space: pre-wrap;
 `;
 
 const StyledP = styled.p`
@@ -65,10 +72,10 @@ const SubscribeBox = styled.div`
 export default function BioBey() {
   return (
     <section id="biobeySection">
-      <div style={{ backgroundColor: theme.blue, marginTop: '50px' }}>
+      <div style={{ backgroundColor: theme.darkblue, marginTop: '50px' }}>
         <ContainerBox style={{ flexDirection: 'column' }}>
           <StyledTitle>
-            What is the scope of<StyledSpan>BioBey</StyledSpan>?
+            What is the scope of<StyledSpan> BioBey </StyledSpan>?
           </StyledTitle>
           <StyledP>
             When I started working with LC-MS, it wasn’t easy to find

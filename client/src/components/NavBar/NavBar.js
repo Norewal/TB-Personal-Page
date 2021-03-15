@@ -19,6 +19,10 @@ const NavBarContainer = styled.div`
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
 
   @media screen and (max-width: 960px) {
     font-size: 1rem;

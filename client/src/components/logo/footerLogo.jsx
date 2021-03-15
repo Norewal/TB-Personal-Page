@@ -8,10 +8,6 @@ import { theme } from "../../theme";
 const LogoContainer = styled.div`
     display: flex;
     flex-direction: row;
-
-    @media screen and (max-width: 320px) {
-        padding-bottom: 20px;
-    }
 `;
 
 const LogoImg = styled.img `
