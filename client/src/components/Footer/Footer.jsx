@@ -66,29 +66,19 @@ const CurrentYear = styled.p`
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
-  return (
-    <footer>
-      <FooterContainer>
-        <FirstPart>
-          <FooterLogo />
-          <SocialIcons />
-        </FirstPart>
-        <CopyRight>
-          <FontAwesomeIcon
-            icon={faCopyright}
-            style={{ color: 'rgba(255, 255, 255, 0.5' }}
-          />
-          <CurrentYear>{currentYear}</CurrentYear>
-          <CopyRightText
-            href="https://www.gabriellajs.digital/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {' '}
-            gabriellaJS
-          </CopyRightText>
-        </CopyRight>
-      </FooterContainer>
+    return (
+        <footer>
+        <FooterContainer>
+            <FirstPart>
+                <FooterLogo />
+                <SocialIcons />
+            </FirstPart>
+            <CopyRight>
+                <FontAwesomeIcon icon={ faCopyright } style={{color: "rgba(255, 255, 255, 0.5"}} /> 
+                <CurrentYear>{currentYear}</CurrentYear>
+                <CopyRightText  href="https://www.gabriellajs.digital/" target="_blank" rel="noopener noreferrer"> gabriellaJS</CopyRightText>
+            </CopyRight>
+        </FooterContainer>
     </footer>
   );
 }
