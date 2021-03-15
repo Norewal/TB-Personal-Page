@@ -6,6 +6,8 @@ function Detail(props) {
             <p className="info">{props.detailInfo1}</p>
             <p className="info">{props.detailInfo2}</p>
             <p className="info">{props.detailInfo3}</p>
+            <p className="info">{props.detailInfo4}</p>
+            <p className="info">{props.detailInfo5}</p>
         </>
     );
 }

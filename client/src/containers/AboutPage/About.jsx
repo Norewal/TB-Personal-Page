@@ -28,9 +28,8 @@ const ImageContainer = styled.div`
   box-shadow: rgba(0, 54, 166, 0.3) 0px 7px 29px 0px;
 
   @media only screen and (max-width: 730px) and (orientation: landscape){
-    display: flex;
-    margin: 0 auto;
-    width: 70%;
+    width: 50%;
+    margin: auto;
   }
 
   @media screen and (max-width: 600px) {

@@ -11,7 +11,7 @@ const SocialIconsContainer = styled.div`
 `;
 const SocialIcon = styled.div`
     color: ${theme.white};
-    background-color: ${theme.darkblue};
+    background-color: ${theme.black};
     font-size: 35px;
     margin: 0 0 0 10px;
     padding: 0 6px;

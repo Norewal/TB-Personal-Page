@@ -49,17 +49,28 @@ const HeroContent = styled.div`
     }
 
     @media only screen and (min-width: 812px) and (max-width: 940px) and (orientation: landscape) {
+        margin-top: 100px;
         padding-right: 0;
     }
 
     @media screen and (max-width: 768px) {
         margin: auto;
-        padding: 0;
+        padding: 80px 0 0;
     } 
 
     @media only screen and (max-width: 730px) and (orientation: landscape) {
         width: 90%;
     }
+
+    @media only screen and (max-width: 653px) and (orientation: landscape) {
+        width: 95%;
+    }
+
+    @media screen and (max-width: 320px) {
+        width: 100%;
+        margin: 0 auto;
+        padding: 100px 20px 0;
+    } 
 `;
 
 const Main = styled.h2 `
@@ -72,6 +83,9 @@ const Main = styled.h2 `
     }
     @media only screen and (max-width: 730px) and (orientation: landscape) {
         font-size: 18px;
+    }
+    @media only screen and (max-width: 653px) and (orientation: landscape) {
+        font-size: 16px;
     }
 `;
 
@@ -88,6 +102,10 @@ const HeroText = styled.h3 `
     @media only screen and (max-width: 730px) and (orientation: landscape) {
         font-size: 14px;
         line-height: 20px;
+    }
+
+    @media only screen and (max-width: 653px) and (orientation: landscape) {
+        padding-bottom: 0;
     }
 
     @media screen and (max-width: 480px) {
@@ -135,9 +153,9 @@ export default function Hero() {
 
     const data = useStaticQuery(graphql`
         query {
-            backgroundImage: file(relativePath: {eq: "bgMin.jpg"}) {
+            backgroundImage: file(relativePath: {eq: "bg.jpg"}) {
                 childImageSharp {
-                    fluid {
+                    fluid(quality: 100, maxWidth: 1920) {
                     ...GatsbyImageSharpFluid
                     }
                 }
@@ -158,7 +176,7 @@ export default function Hero() {
                         <HeroContent>
                             <Main>Welcome to my personal page!</Main>
                             <HeroText>I am <SpamGreen>Tibor Borsos</SpamGreen>, </HeroText>
-                            <HeroText>the creator and owner of <span style={{ fontWeight: "bold"}}>BioBey</span>, a consultancy specialising in <span style={{ fontWeight: "bold"}}>training</span> and supporting <span style={{ fontWeight: "bold"}}>analytical labs</span>, especially in the field of <span style={{ fontWeight: "bold"}}>LC-MC</span> bioanalysis</HeroText>
+                            <HeroText>the creator and owner of <span style={{ fontWeight: "bold"}}>BioBey</span>, a consultancy specialising in <span style={{ fontWeight: "bold"}}>training</span> and <span style={{ fontWeight: "bold"}}>supporting analytical labs</span>, especially in the field of <span style={{ fontWeight: "bold"}}>LC-MC</span> bioanalysis</HeroText>
                             <br></br>
                             <StyledLine />
                             <br></br>

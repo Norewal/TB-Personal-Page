@@ -3,5 +3,5 @@ export const theme = {
     green: "#009962",
     white: "#FFF",
     black: "#080833",
-    darkblue: "#00287B",
+    darkblue: "#002166",
 };

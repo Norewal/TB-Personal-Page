@@ -9,7 +9,7 @@ import Form from './ContactForm';
 const ContactDetailsContainer = styled.div`
   display: flex;
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 550px) {
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -17,9 +17,13 @@ const ContactDetailsContainer = styled.div`
 `;
 
 const ContactText = styled.div`
-  margin-right: 50px;
+  margin-right: 200px;
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 960px) {
+    margin-right: 100px;
+  }
+
+  @media screen and (max-width: 550px) {
     margin: 0;
   }
 `;

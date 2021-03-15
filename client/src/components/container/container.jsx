@@ -8,17 +8,18 @@ const Container = styled.div `
     max-width: 960px;
     height: 100%;
     margin: 0px auto;
-    padding: 100px 0px;
+    padding: 150px 10px;
 
     @media screen and (max-width: 960px) {
         max-width: 760px;
-        margin: 0 auto 50px;
+        margin: 50px auto 50px;
         padding: 80px 20px;
         
     }
 
     @media screen and (max-width: 480px) {
-        padding: 80px 20px;
+        margin: 0 auto;
+        padding: 100px 20px 0;
         
     } 
 `;
