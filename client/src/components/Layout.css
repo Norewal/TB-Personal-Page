@@ -1,12 +1,10 @@
 .main {
-  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .content {
-  flex: 1 0 auto;
+  flex: 1;
   margin-bottom: 0px;
-}
-
-.footer {
-  flex-shrink: 0;
 }
