@@ -75,12 +75,12 @@ export default function BioBey() {
       <div style={{ backgroundColor: theme.darkblue, marginTop: '50px' }}>
         <ContainerBox style={{ flexDirection: 'column' }}>
           <StyledTitle>
-            What is the scope of<StyledSpan> BioBey </StyledSpan>?
+            What is the scope of<StyledSpan> BioBey</StyledSpan>?
           </StyledTitle>
           <StyledP>
             When I started working with LC-MS, it wasn’t easy to find
             relevant information, either free or not, especially if my search was
-            related to practical knowledge.
+            related to <span style={{ fontStyle: "italic", fontWeight: 'bold'}}>practical</span> knowledge.
           </StyledP>
           <StyledP style={{ textAlign: 'center', margin: '20px' }}>
             That’s why I created {' '}
@@ -123,10 +123,12 @@ export default function BioBey() {
               </Link> 
               if you would like to get more information or have any suggestions for me.
             </StyledP>
+          {/* 
             <StyledP style={{ textAlign: 'center'}}>Subscribe to my newsletter & stay updated!</StyledP>
             <SubscribeBox>
               <SubscribeForm />
             </SubscribeBox>
+          */ }
           </SubscribeContainer>
         </ContainerBox>
       </div>

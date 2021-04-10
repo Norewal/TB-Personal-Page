@@ -106,9 +106,9 @@ export default function About() {
             </ImageContainer>
             <AboutContent>
               <StyledParagraph>
-                I am a chemist with over 13 years of experience in analytical
+                I am a chemist with over 13 years' experience in analytical
                 chemistry in the pharma and CRO industry. I have worked under
-                GMP, GLP and GC(L)P regulated areas as well, with a wide range
+                GMP, GLP and GC(L)P regulated areas, with a wide range
                 of instrumentation and studies.
               </StyledParagraph>
               <StyledParagraph>

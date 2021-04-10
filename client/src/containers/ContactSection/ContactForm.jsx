@@ -140,7 +140,7 @@ export default function Form() {
           <StyledInput type="email" name="email" placeholder="Email" aria-label = "Email" required />
       </ContactFormHeader>
       <ContactFormBody>
-          <StyledInput type="text" name="subject" placeholder="Subject" aria-label = "Subject" required />
+          <StyledInput type="text" name="subject" placeholder="Subject" aria-label = "Subject" />
           <StyledTextArea
             name="message"
             placeholder="Message"

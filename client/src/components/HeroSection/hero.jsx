@@ -176,11 +176,12 @@ export default function Hero() {
                         <HeroContent>
                             <Main>Welcome to my personal page!</Main>
                             <HeroText>I am <SpamGreen>Tibor Borsos</SpamGreen>, </HeroText>
-                            <HeroText>the creator and owner of <span style={{ fontWeight: "bold"}}>BioBey</span>, a consultancy specialising in <span style={{ fontWeight: "bold"}}>training</span> and <span style={{ fontWeight: "bold"}}>supporting analytical labs</span>, especially in the field of <span style={{ fontWeight: "bold"}}>LC-MC</span> bioanalysis</HeroText>
+                            <HeroText>the creator and owner of <span style={{ fontWeight: "bold"}}>BioBey</span>, a consultancy specialising in <span style={{ fontWeight: "bold"}}>training</span> and <span style={{ fontWeight: "bold"}}>supporting analytical labs</span>, especially in the field of <span style={{ fontWeight: "bold"}}>LC-MS</span> bioanalysis.</HeroText>
                             <br></br>
                             <StyledLine />
                             <br></br>
-                            <HeroText>I offer expertise to laboratories of pharmaceutical companies, universities, start-ups and CROs. </HeroText>                       
+                            <HeroText>I offer expertise to laboratories of pharmaceutical companies, universities, <br></br> start-ups and CROs. </HeroText>       
+                        
                             <HeroText>My ”end-to-end” services include finding the best instrumentation to your needs, process planning, staff training, and much more!</HeroText>
                             {/*<DownArrowContainer onClick={scrollToNextSection}>
                                 <ScrollDown />

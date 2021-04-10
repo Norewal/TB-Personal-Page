@@ -59,7 +59,7 @@ const ImageContainer = styled.div`
   float: right;
   min-width: 50%;
   min-height: 50%;
-  margin: 0 0 20px 20px;
+  margin: 0 0 20px 30px;
   border-radius: 5px;
   box-shadow: rgba(0, 54, 166, 0.3) 0px 7px 29px 0px;
 
@@ -136,7 +136,7 @@ export default function ServiceEdu() {
             <ServiceBulletPoint>
               <CheckMark />
               <ServiceEduPoint>
-                Basic level macro writing training: if you are to start macro writing on your own, for your own tasks, then I can also help you with that. 
+                Basic level macro writing training: if you are to start macro writing on your own, for your own tasks, then I can help you with that as well. 
                 The best way to start preparing your own forms and templates.
               </ServiceEduPoint>
             </ServiceBulletPoint>

@@ -59,7 +59,7 @@ const ImageContainer = styled.div`
   float: right;
   min-width: 50%;
   min-height: 50%;
-  margin: 0 0 20px 20px;
+  margin: 0 0 20px 30px;
   border-radius: 5px;
   box-shadow: rgba(0, 54, 166, 0.3) 0px 7px 29px 0px;
 

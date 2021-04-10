@@ -30,6 +30,11 @@ const Paragraph = styled.p`
   text-align: justify;
   text-justify: inter-word;
 
+  &:nth-child(9) {
+    color: ${theme.green};
+    font-family: 'Gotham-Black';
+  }
+
   @media screen and (max-width: 480px) {
     font-size: 14px;
   }
@@ -102,10 +107,11 @@ export default function AboutLong() {
             <SecondPart>
               <Subtitle>TECHNICAL SKILLS</Subtitle>
               <Paragraph>
-                I have strong IT skills, and I am advanced user of Sciex Analyst,
-                but also worked with MassLynx, as well as Thermo’s XCalibur and
-                LCquan, but have good knowledge of other software packages, and
-                Watson LIMS.
+                I have strong IT skills, and I am an advanced user of Sciex Analyst. I have previously worked with MassLynx, as well as Thermo’s XCalibur and LCquan.
+              </Paragraph>
+              <Paragraph>
+                I know other software packages, including electronic laboratory notebooks and laboratory information management systems (ELN and LIMS), 
+                such as Waters NuGenesis or the industry leading Watson LIMS.
               </Paragraph>
               <Paragraph>
                 I used robotic liquid handlers such as TomTec Quadra or CyBio
@@ -118,8 +124,8 @@ export default function AboutLong() {
               </Paragraph>
               <Paragraph>
                 I was so lucky that I gained insights into most parts of nonclinical tests, 
-                including dosing of test subjects, a range of TK studies, 
-                in vitro and ADME work, and metabolite identification.
+                including dosing of test subjects, a range of TK studies,  
+                <i> in vitro</i> and ADME work, and metabolite identification.
               </Paragraph>
               <Paragraph>
                 I learnt at some of the biggest and best bioanalytical labs in the UK and Europe. 
@@ -130,7 +136,7 @@ export default function AboutLong() {
                 These altogether became the basis of my approach to method development, 
                 troubleshooting and documentation, to make tasks more effective.
               </Paragraph>
-              <Paragraph style={{ fontWeight: 'bold' }}>
+              <Paragraph>
                 I would like to present you this combined knowledge, the essence of what I learnt at all these excellent labs.
               </Paragraph>
               <Subtitle style={{ marginTop: '50px' }}>PERSONAL</Subtitle>
