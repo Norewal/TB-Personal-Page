@@ -5,7 +5,7 @@ const timeLinePoints = [
         imgURL: "",
         description1: "During my PhD studies in aerosol chemistry, I started a part-time job in the pharmaceutical industry in a GMP regulated area.",
         description2: "My first tasks as an analyst included water analysis (TOC and conductivity) but I soon joined a particle inspection laboratory where I mainly worked with a Malvern Morphologi G2 (later upgraded to G3) digital microscope to determine particle size distributions and morphological parameters of APIs. ",
-        description3: "I also had some experience with other (particle size determination) PSD systems such as Malvern’s Mastersizer 2000 and Scirocco 2000 systems.",
+        description3: "I also had some experience with other particle size determination (PSD) systems such as Malvern’s Mastersizer 2000 and Scirocco 2000 systems.",
         description4: "",
         description5: ""
     },

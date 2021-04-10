@@ -29,7 +29,7 @@ const CardLeft = styled.div`
 
     @media screen and (max-width: 480px) {
         width: 95%;
-        padding: 0 15px 0 0px;
+        padding: 0 30px 0 20px;
     }
 `;
 const CardRight = styled.div`
@@ -61,10 +61,12 @@ const AboutContent = styled.div`
     padding: 0px 0 20px;
     text-align: justify;
     text-justify: inter-word;
+    line-height: 30px;
 
     @media screen and (max-width: 480px) {
         font-size: 14px;
         padding: 0px 0 10px;
+        line-height: 20px;
     }
 `;
 
@@ -109,7 +111,7 @@ export default function AboutCard(props) {
             style={{
                 flexDirection: props.id % 2 === 0 ? "row-reverse" : "row",
                 //marginTop: props.id !== 1 ? "-100px" : "0",
-                margin: isMobile && props.id % 2 === 0 ? " 0px 10px 0 -15px" : "0",
+                margin: isMobile && props.id % 2 === 0 ? " 0px 20px 0 -20px" : "0",
                 padding: isMobile && props.id % 2 === 0 ? " 0px 0px 0 0px" : "0"
             }}>
             <CardLeft>
@@ -125,7 +127,7 @@ export default function AboutCard(props) {
             <BulletPoint
                 style={{
                     transform: isMobile && props.id % 2 === 0 ? "scaleX(-1)" : "none",
-                    margin: isMobile && props.id % 2 === 0 ? " 0 0 0 10px" : "0"
+                    margin: isMobile && props.id % 2 === 0 ? " 0 0 0 20px" : "0"
                 }}
                 >
                 <FontAwesomeIcon 
