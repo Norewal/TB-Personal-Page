@@ -4,8 +4,8 @@ const timeLinePoints = [
         title: "First steps into the pharma world",
         imgURL: "",
         description1: "During my PhD studies in aerosol chemistry, I started a part-time job in the pharmaceutical industry in a GMP regulated area.",
-        description2: "My first tasks as an analyst included water analysis (TOC and conductivity) but I soon joined a particle inspection laboratory where I mainly worked with a Malvern Morphologi G2 (which was later upgraded to G3) digital microscope to determine particle size distributions and morphological parameters of APIs. ",
-        description3: "I also had some experience with other PSD (particle size determination) systems such as Malvern’s Mastersizer 2000 and Scirocco 2000 systems.",
+        description2: "My first tasks as an analyst included water analysis (TOC and conductivity) but I soon joined a particle inspection laboratory where I mainly worked with a Malvern Morphologi G2 (later upgraded to G3) digital microscope to determine particle size distributions and morphological parameters of APIs. ",
+        description3: "I also had some experience with other (particle size determination) PSD systems such as Malvern’s Mastersizer 2000 and Scirocco 2000 systems.",
         description4: "",
         description5: ""
     },
@@ -14,7 +14,7 @@ const timeLinePoints = [
         title: "First full-time job",
         imgURL: "",
         description1: "My very first full-time job was in the GC group of the R&D Laboratory for APIs of Egis Pharmaceuticals PLC (part of the Servier group).",
-        description2: "In that lab, we had almost all brands and types of GCs available, including Varian (CP-3800 and 450-GC), Agilents (6890 and 7890A, running different versions of ChemStation).",
+        description2: "In that lab, we had almost all brands and types of GCs available, including different Varian, Agilent and PerkinElmer models, and a Shimadzu.",
         description3: "",
         description4: "",
         description5: ""
@@ -23,15 +23,15 @@ const timeLinePoints = [
         id: 3,
         title: "Deep into pharmacokinetics",
         imgURL: "",
-        description1: "In 2013, I joined the Department of Pharmacokinetics where I started working with GCP (bioequivalence) studies, acting as a study director. This was the first time I worked with Sciex (API 2000) and Thermo (Quantum Ultra) triple quad MS systems and HPLCs.",
-        description2: "Besides performing method development, validations and sample analysis for large clinical studies (2–3000 samples each), I gained insights into data evaluation via performing PK calculations (NCA and BE) and basic level PK modelling with Phoenix WinNonlin.",
+        description1: "In 2013, I joined the Department of Pharmacokinetics where I started working with GCP (bioequivalence) studies, acting as a study director. This was the first time I worked with Sciex and Thermo triple quadrupole mass spectrometers coupled with Agilent HPLCs and Shimadzu UHPLCs.",
+        description2: "Besides performing method development, validations and sample analysis for large clinical studies (2–3000 samples each), I gained insights into data evaluation via performing PK calculations (NCA, IVIVC and BE) and basic level PK modelling with Phoenix WinNonlin.",
         description3: "",
         description4: "",
         description5: ""
     },
     {
         id: 4,
-        title: "Learning tips and tricks at CROs",
+        title: "In the CRO world",
         imgURL: "",
         description1: "I wanted to enhance my knowledge in an environment where I can see how some of the best labs of the industry work, so I decided to continue my career in the UK. I worked there between January 2016 and August 2020 at multiple CROs: LGC, Envigo (now Covance), ABS Laboratories, and finally Pharmaron. During this period, I had the chance to gain insights into most bits of nonclinical research, including in vitro and ADME work, as well as a wide range of toxicity studies.",
         description2: "I have hands-on experience as senior scientist and study director. In my latest role, I was a senior technical specialist. The projects I was involved in were mainly GLP regulated but there were nonreg and GCP studies, as well as work according to SANCO (chemicals). My tasks involved method development, validation and sample analysis (including tissue and formulation analysis).",

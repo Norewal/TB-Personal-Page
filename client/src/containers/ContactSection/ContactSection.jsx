@@ -54,8 +54,8 @@ export default function ContactSection() {
           <ContactText>
             <StyledP>
               I am more than happy to take your valuable suggestions related to
-              site content, improvements, as well as suggestions on any new
-              content, topics that would be of your interest.
+              site content, potential improvements, as well as suggestions on any new
+              content, topics that would be of your interest!
             </StyledP>
           </ContactText>
           <SocialIcons/>
