@@ -105,7 +105,7 @@ function MainNavBar() {
           </NavItem>
           <NavItem>
             <Link to="/biobey" className="nav-links" onClick={closeMobileMenu}>
-              BioBey
+              BioSol
             </Link>
           </NavItem>
           <NavItem>
