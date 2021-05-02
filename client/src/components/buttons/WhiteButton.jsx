@@ -5,6 +5,7 @@ import { theme } from '../../theme';
 
 
 const ButtonWhiteWrapper = styled.button `
+    -webkit-appearance: none;
     padding: 16px 33px;
     border-radius: 5px;
     border: 2px solid ${theme.blue};
