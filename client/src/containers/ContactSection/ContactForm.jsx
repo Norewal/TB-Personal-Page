@@ -88,7 +88,7 @@ const StyledButton = styled.input`
   width: 20%;
   border-radius: 3px;
   border: 0;
-  padding: 20px!important;
+  padding: 20px;
   margin-bottom: 10px;
   /*display: block; */
   font-family: 'Gotham-Bold';
@@ -136,7 +136,14 @@ export default function Form() {
     <ContactForm onSubmit={sendEmail}>
       {/* <input className="input" type="hidden" name="contact_number"placeholder="Name" /> */}
       <ContactFormHeader>
-          <StyledInput type="text" name="name" placeholder="Name" aria-label = "Name" required />
+          <StyledInput 
+            type="text" 
+            name="name" 
+            placeholder="Name" 
+            aria-label = "Name" 
+            required 
+            style={{boxShadow: "0px 1px 5px 0px rgba(0, 40, 123, 0.3)"}}
+          />
           <StyledInput type="email" name="email" placeholder="Email" aria-label = "Email" required />
       </ContactFormHeader>
       <ContactFormBody>
@@ -151,7 +158,7 @@ export default function Form() {
     
       </ContactFormBody>
       <ButtonContainer>
-        <StyledButton type="submit" value="Let's talk" />
+        <StyledButton type="submit" value="Let's talk" style={{padding: "20px"}} />
       </ButtonContainer>
     </ContactForm>
   );
