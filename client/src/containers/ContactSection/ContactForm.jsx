@@ -28,6 +28,7 @@ const ContactFormBody = styled.div``;
 
 const StyledInput = styled.input`
   /*border: 3px solid ${theme.green};*/
+  -webkit-appearance: none;
   background-color: ${theme.white};
   box-shadow: rgba(0, 40, 123, 0.3) 0px 1px 5px 0px;
   border: none;
@@ -55,6 +56,7 @@ const StyledInput = styled.input`
 
 const StyledTextArea = styled.textarea`
   /*border: 3px solid ${theme.green};*/
+  -webkit-appearance: none;
   background-color: ${theme.white};
   box-shadow: 0px 1px 5px 0px rgba(0, 40, 123, 0.3);
   border: none;
@@ -84,6 +86,7 @@ const ButtonContainer = styled.div`
 `;
 
 const StyledButton = styled.input`
+  -webkit-appearance: none;
   background-color: ${theme.darkblue};
   width: 20%;
   border-radius: 3px;
@@ -142,7 +145,6 @@ export default function Form() {
             placeholder="Name" 
             aria-label = "Name" 
             required 
-            style={{boxShadow: "0px 1px 5px 0px rgba(0, 40, 123, 0.3)"}}
           />
           <StyledInput type="email" name="email" placeholder="Email" aria-label = "Email" required />
       </ContactFormHeader>
@@ -158,7 +160,7 @@ export default function Form() {
     
       </ContactFormBody>
       <ButtonContainer>
-        <StyledButton type="submit" value="Let's talk" style={{padding: "20px"}} />
+        <StyledButton type="submit" value="Let's talk" />
       </ButtonContainer>
     </ContactForm>
   );
