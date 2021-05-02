@@ -74,6 +74,7 @@ const ServiceContent = styled.p`
 `;
 
 const StyledButtonsWhite = styled(ButtonsWhite)`
+  -webkit-appearance: none;
   position: absolute;
   bottom: 30px;
   left: 0;
