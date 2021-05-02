@@ -70,7 +70,7 @@ const HeroContent = styled.div`
         width: 100%;
         margin: 0 auto;
         padding: 100px 20px 0;
-    } 
+    }    
 `;
 
 const Main = styled.h2 `
@@ -176,7 +176,7 @@ export default function Hero() {
                         <HeroContent>
                             <Main>Welcome to my personal page!</Main>
                             <HeroText>I am <SpamGreen>Tibor Borsos</SpamGreen>, </HeroText>
-                            <HeroText>the creator and owner of <span style={{ fontWeight: "bold"}}>BioBey</span>, a consultancy specialising in <span style={{ fontWeight: "bold"}}>training</span> and <span style={{ fontWeight: "bold"}}>supporting analytical labs</span>, especially in the field of <span style={{ fontWeight: "bold"}}>LC-MS</span> bioanalysis.</HeroText>
+                            <HeroText>the creator and owner of <span style={{ fontWeight: "bold"}}>Bioanalytical Solutions</span>, a consultancy specialising in <span style={{ fontWeight: "bold"}}>training</span> and <span style={{ fontWeight: "bold"}}>supporting analytical labs</span>, especially in the field of <span style={{ fontWeight: "bold"}}>LC-MS</span> bioanalysis.</HeroText>
                             <br></br>
                             <StyledLine />
                             <br></br>

@@ -75,7 +75,7 @@ export default function BioBey() {
       <div style={{ backgroundColor: theme.darkblue, marginTop: '50px' }}>
         <ContainerBox style={{ flexDirection: 'column' }}>
           <StyledTitle>
-            What is the scope of<StyledSpan> BioBey</StyledSpan>?
+            What is the scope of<StyledSpan> Bioanalytical Solutions</StyledSpan>?
           </StyledTitle>
           <StyledP>
             When I started working with LC-MS, it wasn’t easy to find
@@ -84,7 +84,7 @@ export default function BioBey() {
           </StyledP>
           <StyledP style={{ textAlign: 'center', margin: '20px' }}>
             That’s why I created {' '}
-            <span style={{ fontWeight: '800', margin: '0' }}>BioBey</span>.
+            <span style={{ fontWeight: '800', margin: '0' }}>Bioanalytical Solutions</span>.
             Among my purposes are
           </StyledP>
           <ListContainer>
