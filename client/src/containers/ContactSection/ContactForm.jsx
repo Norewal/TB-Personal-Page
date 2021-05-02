@@ -56,7 +56,7 @@ const StyledInput = styled.input`
 const StyledTextArea = styled.textarea`
   /*border: 3px solid ${theme.green};*/
   background-color: ${theme.white};
-  box-shadow: rgba(0, 40, 123, 0.3) 0px 1px 5px 0px;
+  box-shadow: 0px 1px 5px 0px rgba(0, 40, 123, 0.3);
   border: none;
   width: 100%;
   border-radius: 3px;
@@ -88,7 +88,7 @@ const StyledButton = styled.input`
   width: 20%;
   border-radius: 3px;
   border: 0;
-  padding: 20px;
+  padding: 20px!important;
   margin-bottom: 10px;
   /*display: block; */
   font-family: 'Gotham-Bold';
