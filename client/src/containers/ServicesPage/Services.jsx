@@ -5,11 +5,17 @@ import ContainerBox from '../../components/container/container';
 import styled from 'styled-components';
 import CheckMark from '../../components/DownArrow/checkMark';
 import ButtonsWhite from '../../components/buttons/WhiteButton';
-import { Link, graphql, useStaticQuery  } from 'gatsby';
+import { Link, graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
+import BackgroundImage from 'gatsby-background-image';
 
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+
+const NewSection = styled.section`
+  /* background-color: #f2f2f2;
+  background-image: url('https://www.transparenttextures.com/patterns/gplay.png');*/
+`;
 
 const ServicesContainer = styled.div`
   display: flex;
@@ -26,12 +32,17 @@ const ServicesContainer = styled.div`
 `;
 
 const ServiceBox = styled.div`
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 400px;
   border-radius: 3px;
   text-align: center;
   padding: 0 0 50px 0;
   margin: 0 auto;
-  position: relative;
+
   box-shadow: rgba(0, 54, 166, 0.3) 0px 7px 29px 0px;
 
   @media screen and (max-width: 960px) {
@@ -69,15 +80,10 @@ const ServicePoint = styled.div`
   }
 `;
 
-const ServiceContent = styled.p`
-
-`;
+const ServiceContent = styled.p``;
 
 const StyledButtonsWhite = styled(ButtonsWhite)`
-  position: absolute;
   bottom: 30px;
-  left: 0;
-  right: 0;
   margin: 0 auto;
 
   @media screen and (max-width: 768px) {
@@ -91,112 +97,123 @@ export default function Services() {
   const [clickLab, setClickLab] = useState(true);
 
   if (!clickEdu) {
-    return <Redirect to="/serviceEdu" />;
+    return <Redirect to='/serviceEdu' />;
   }
   if (!clickLab) {
-    return <Redirect to="/serviceLab" />;
+    return <Redirect to='/serviceLab' />;
   }
-
 
   const data = useStaticQuery(graphql`
     query {
-      serviceMainLaboratory: file(relativePath: {eq: "main2-min.jpg"}) {
+      serviceMainLaboratory: file(relativePath: { eq: "main2-min.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      serviceMainEducation: file(relativePath: {eq: "main1-min.jpg"}) {
+      serviceMainEducation: file(relativePath: { eq: "main1-min.jpg" }) {
         childImageSharp {
           fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      backgroundImage: file(relativePath: { eq: "bg4.png" }) {
+        childImageSharp {
+          fluid(quality: 100, maxWidth: 1920) {
             ...GatsbyImageSharpFluid
           }
         }
       }
     }
-  `)
+  `);
 
   return (
     <>
-      <section id="servicesSection">
-        <ContainerBox>
-          <Titles>Services</Titles>
-          <ServicesContainer>
-            <ServiceBox>
-              <ImageContainer>
-                <Img 
-                  fluid={data.serviceMainEducation.childImageSharp.fluid}
-                  alt="Services: Laboratory"
-                />
-              </ImageContainer>
-              <ServiceTitle>Scientific education</ServiceTitle>
-
-              <ServicePoint>
-                <CheckMark />
-                <ServiceContent>
-                  Training programmes: development and execution of tailored company trainings 
-                </ServiceContent>
-              </ServicePoint>
-              <ServicePoint>
-                <CheckMark />
-                <ServiceContent>
-                  Online trainings: learn and gain practical skills at your own pace, whenever you want.
-                  Test your knowledge before receiving a certificate
-                </ServiceContent>
-              </ServicePoint>
-              <ServicePoint style={{ paddingBottom: '80px' }}>
-                <CheckMark />
-                <ServiceContent>
-                  Microsoft Excel and Word training: master your spreadsheets and reports, and learn the basics of macro writing
-                </ServiceContent>
-              </ServicePoint>
-              <Link to="/service-edu" rel="noopener noreferrer">
-                <StyledButtonsWhite>
-                  Read more
-                </StyledButtonsWhite>
-              </Link>
-            </ServiceBox>
-
-
-
-            <ServiceBox>
-              <ImageContainer>
-                <Img 
-                    fluid={data.serviceMainLaboratory.childImageSharp.fluid}
-                    alt="Services: Laboratory"
+      <BackgroundImage
+        fluid={data.backgroundImage.childImageSharp.fluid}
+        fadeIn
+      >
+        <NewSection id='servicesSection'>
+          <ContainerBox>
+            <Titles>Services</Titles>
+            <ServicesContainer>
+              <ServiceBox>
+                <ImageContainer>
+                  <Img
+                    fluid={data.serviceMainEducation.childImageSharp.fluid}
+                    alt='Services: Laboratory'
                   />
-              </ImageContainer>
-              <ServiceTitle>Laboratory and regulatory</ServiceTitle>
+                </ImageContainer>
+                <ServiceTitle>Scientific education</ServiceTitle>
 
-              <ServicePoint>
-                <CheckMark />
-                <ServiceContent>
-                  Providing remote or on-site expertise for GLP/GCP regulated bioanalytical studies
-                </ServiceContent>
-              </ServicePoint>
-              <ServicePoint>
-                <CheckMark />
-                <ServiceContent>
-                  Scientific review of contracts, pricing, lab metrics and KPIs
-                </ServiceContent>
-              </ServicePoint>
-              <ServicePoint>
-                <CheckMark />
-                <ServiceContent style={{ paddingBottom: '80px' }}>
-                  Process review and development: get effective with speeding up workflows.
-                  Drafting, reviewing and updating policies, SOPs, forms and study plan/report templates
-                </ServiceContent>
-              </ServicePoint>             
-              <Link to="/service-lab" rel="noopener noreferrer">
-                <StyledButtonsWhite>
-                  Read more
-                </StyledButtonsWhite>
-              </Link>
-            </ServiceBox>
-          </ServicesContainer>
-        </ContainerBox>
-      </section>
+                <ServicePoint>
+                  <CheckMark />
+                  <ServiceContent>
+                    Training programmes: development and execution of tailored
+                    company trainings
+                  </ServiceContent>
+                </ServicePoint>
+                <ServicePoint>
+                  <CheckMark />
+                  <ServiceContent>
+                    Online trainings: learn and gain practical skills at your
+                    own pace, whenever you want. Test your knowledge before
+                    receiving a certificate
+                  </ServiceContent>
+                </ServicePoint>
+                <ServicePoint style={{ paddingBottom: '80px' }}>
+                  <CheckMark />
+                  <ServiceContent>
+                    Microsoft Excel and Word training: master your spreadsheets
+                    and reports, and learn the basics of macro writing
+                  </ServiceContent>
+                </ServicePoint>
+                <Link to='/service-edu' rel='noopener noreferrer'>
+                  <StyledButtonsWhite>Read more</StyledButtonsWhite>
+                </Link>
+              </ServiceBox>
+
+              <ServiceBox>
+                <ImageContainer>
+                  <Img
+                    fluid={data.serviceMainLaboratory.childImageSharp.fluid}
+                    alt='Services: Laboratory'
+                  />
+                </ImageContainer>
+                <ServiceTitle>Laboratory and regulatory</ServiceTitle>
+
+                <ServicePoint>
+                  <CheckMark />
+                  <ServiceContent>
+                    Providing remote or on-site expertise for GLP/GCP regulated
+                    bioanalytical studies
+                  </ServiceContent>
+                </ServicePoint>
+                <ServicePoint>
+                  <CheckMark />
+                  <ServiceContent>
+                    Scientific review of contracts, pricing, lab metrics and
+                    KPIs
+                  </ServiceContent>
+                </ServicePoint>
+                <ServicePoint>
+                  <CheckMark />
+                  <ServiceContent style={{ paddingBottom: '80px' }}>
+                    Process review and development: get effective with speeding
+                    up workflows. Drafting, reviewing and updating policies,
+                    SOPs, forms and study plan/report templates
+                  </ServiceContent>
+                </ServicePoint>
+                <Link to='/service-lab' rel='noopener noreferrer'>
+                  <StyledButtonsWhite>Read more</StyledButtonsWhite>
+                </Link>
+              </ServiceBox>
+            </ServicesContainer>
+          </ContainerBox>
+        </NewSection>
+      </BackgroundImage>
     </>
   );
 }

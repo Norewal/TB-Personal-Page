@@ -6,6 +6,19 @@ import { theme } from '../../theme';
 import SubscribeForm from '../../components/Subscribe/SubscribeForm';
 import Layout from '../../components/Layout';
 import { Link } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
+import BackgroundImage from 'gatsby-background-image';
+
+const BG = styled.div`
+  background-color: ${theme.darkblue};
+  /*background-image: url('https://www.transparenttextures.com/patterns/hexellence.png');*/
+`;
+
+const BGContainer = styled.div`
+  background-color: ${theme.darkblue};
+  max-width: 1040px;
+  margin: auto;
+`;
 
 const StyledTitle = styled.h1`
   display: flex;
@@ -70,68 +83,99 @@ const SubscribeBox = styled.div`
 `;
 
 export default function BioBey() {
+  const data = useStaticQuery(graphql`
+    query {
+      backgroundImage: file(relativePath: { eq: "new15.png" }) {
+        childImageSharp {
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `);
+
   return (
-    <section id="biobeySection">
-      <div style={{ backgroundColor: theme.darkblue, marginTop: '50px' }}>
-        <ContainerBox style={{ flexDirection: 'column' }}>
-          <StyledTitle>
-            What is the scope of<StyledSpan> Bioanalytical Solutions</StyledSpan>?
-          </StyledTitle>
-          <StyledP>
-            When I started working with LC-MS, it wasn’t easy to find
-            relevant information, either free or not, especially if my search was
-            related to <span style={{ fontStyle: "italic", fontWeight: 'bold'}}>practical</span> knowledge.
-          </StyledP>
-          <StyledP style={{ textAlign: 'center', margin: '20px' }}>
-            That’s why I created {' '}
-            <span style={{ fontWeight: '800', margin: '0' }}>Bioanalytical Solutions</span>.
-            Among my purposes are
-          </StyledP>
-          <ListContainer>
-            <ListItem>
-              <CircleCheckMark />
-              To save time for you so that you can easily find relevant knowledge
-            </ListItem>
-            <ListItem>
-              <CircleCheckMark />
-              To make available a range of bioanalysis related scientific calculations at a single place
-            </ListItem>
-            <ListItem>
-              <CircleCheckMark />
-              To give you access to great training materials, as well as a collection of all the related guidelines and regulations
-            </ListItem>
-            <ListItem>
-              <CircleCheckMark />
-              To make things convenient for you
-            </ListItem>
-          </ListContainer>
-          <StyledP>
-            I provide practical tutorials for basic laboratory skills 
-            (health and safety, balances, pipettes, mixers, centrifuges, fridges and freezers, etc.), 
-            basic and advanced level HPLC and LC-MS trainings. 
-            You can also learn about method development strategies and sample preparation techniques 
-            (e.g. PPT, LLE, SLE, SPE), as well as troubleshooting.
-          </StyledP>
-          <SubscribeContainer>
-            <StyledP style={{ textAlign: 'center'}}>
-              Please 
-              <Link 
-              to="/contact" 
-              style={{color: "#009962", fontWeight: 'bold', textDecoration: 'none' }}
-              >
-                {' '}contact me{' '} 
-              </Link> 
-              if you would like to get more information or have any suggestions for me.
+    <BG>
+      <section id='biobeySection'>
+        <BGContainer>
+          <ContainerBox>
+            <StyledTitle>
+              What is the scope of
+              <StyledSpan> Bioanalytical Solutions</StyledSpan>?
+            </StyledTitle>
+            <StyledP>
+              When I started working with LC-MS, it wasn’t easy to find relevant
+              information, either free or not, especially if my search was
+              related to{' '}
+              <span style={{ fontStyle: 'italic', fontWeight: 'bold' }}>
+                practical
+              </span>{' '}
+              knowledge.
             </StyledP>
-          {/* 
+            <StyledP style={{ textAlign: 'center', margin: '20px' }}>
+              That’s why I created{' '}
+              <span style={{ fontWeight: '800', margin: '0' }}>
+                Bioanalytical Solutions
+              </span>
+              . Among my purposes are
+            </StyledP>
+            <ListContainer>
+              <ListItem>
+                <CircleCheckMark />
+                To save time for you so that you can easily find relevant
+                knowledge
+              </ListItem>
+              <ListItem>
+                <CircleCheckMark />
+                To make available a range of bioanalysis related scientific
+                calculations at a single place
+              </ListItem>
+              <ListItem>
+                <CircleCheckMark />
+                To give you access to great training materials, as well as a
+                collection of all the related guidelines and regulations
+              </ListItem>
+              <ListItem>
+                <CircleCheckMark />
+                To make things convenient for you
+              </ListItem>
+            </ListContainer>
+            <StyledP>
+              I provide practical tutorials for basic laboratory skills (health
+              and safety, balances, pipettes, mixers, centrifuges, fridges and
+              freezers, etc.), basic and advanced level HPLC and LC-MS
+              trainings. You can also learn about method development strategies
+              and sample preparation techniques (e.g. PPT, LLE, SLE, SPE), as
+              well as troubleshooting.
+            </StyledP>
+            <SubscribeContainer>
+              <StyledP style={{ textAlign: 'center' }}>
+                Please
+                <Link
+                  to='/contact'
+                  style={{
+                    color: '#009962',
+                    fontWeight: 'bold',
+                    textDecoration: 'none',
+                  }}
+                >
+                  {' '}
+                  contact me{' '}
+                </Link>
+                if you would like to get more information or have any
+                suggestions for me.
+              </StyledP>
+              {/* 
             <StyledP style={{ textAlign: 'center'}}>Subscribe to my newsletter & stay updated!</StyledP>
             <SubscribeBox>
               <SubscribeForm />
             </SubscribeBox>
-          */ }
-          </SubscribeContainer>
-        </ContainerBox>
-      </div>
-    </section>
+          */}
+            </SubscribeContainer>
+          </ContainerBox>
+        </BGContainer>
+      </section>
+    </BG>
   );
 }
