@@ -9,7 +9,7 @@ import Layout from '../components/Layout';
 import SEO from '../components/seo';
 import BackgroundBiobey from '../images/BG-Biobey.png';
 import BackgroundServices from '../images/BG-Services.png';
-import BackgroundAbout from '../images/BG-About.png';
+import BackgroundAbout from '../images/BG-About5.png';
 import BackgroundContact from '../images/BG-Contact.png';
 
 const BGBioBey = styled.div`
@@ -19,8 +19,7 @@ const BGBioBey = styled.div`
 `;
 
 const BGAbout = styled.div`
-  background-image: url(${BackgroundAbout});
-  background-position: top left;
+  background-position: top right;
   background-repeat: no-repeat;
 `;
 
