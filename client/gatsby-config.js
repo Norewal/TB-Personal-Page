@@ -3,9 +3,8 @@ module.exports = {
     title: 'Tibor Borsos',
     description: 'Personal Page',
     keywords: 'bioanalysis, biobey, LC-MC, laboratory, education, pharmaceutic',
-    image: '/about.jpg',
+    image: '/profilePic.png',
     url: 'https://www.tiborborsos.com',
-
   },
   plugins: [
     `gatsby-plugin-styled-components`,

@@ -79,7 +79,7 @@ const StyledButtons = styled(Buttons)`
 export default function About() {
   const data = useStaticQuery(graphql`
     query {
-      about: file(relativePath: { eq: "ProfilePic6.png" }) {
+      about: file(relativePath: { eq: "profilePic.png" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid

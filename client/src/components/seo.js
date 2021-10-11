@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
-function SEO({ description, lang, meta, title }) {
+function SEO({ description, lang, meta, title, image, url, keywords }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -11,6 +11,9 @@ function SEO({ description, lang, meta, title }) {
           siteMetadata {
             title
             description
+            image
+            url
+            keywords
           }
         }
       }
@@ -18,7 +21,16 @@ function SEO({ description, lang, meta, title }) {
   );
 
   const metaDescription = description || site.siteMetadata.description;
-  const defaultTitle = site.siteMetadata?.title;
+  const defaultTitle = site.siteMetadata.title;
+  const metaUrl = url || site.siteMetadata.url;
+  const metaImage = image || site.siteMetadata.image;
+  const metaKeywords = keywords || [
+    'consultancy',
+    'training',
+    'analytical labs',
+    'LC-MC',
+    'bioanalysis',
+  ];
 
   return (
     <Helmet
@@ -36,6 +48,8 @@ function SEO({ description, lang, meta, title }) {
           property: `og:title`,
           content: title,
         },
+        { property: `og:image`, content: metaImage },
+        { property: `og:url`, content: metaUrl },
         {
           property: `og:description`,
           content: metaDescription,
@@ -46,7 +60,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:card`,
-          content: `summary`,
+          content: `I offer expertise to laboratories of pharmaceutical companies, universities, start-ups and CROs.`,
         },
         {
           name: `twitter:creator`,
@@ -60,7 +74,14 @@ function SEO({ description, lang, meta, title }) {
           name: `twitter:description`,
           content: metaDescription,
         },
-      ].concat(meta)}
+      ].concat(
+        metaKeywords && metaKeywords.length > 0
+          ? {
+              name: 'keywords',
+              content: metaKeywords.join(`, `),
+            }
+          : []
+      )}
     />
   );
 }

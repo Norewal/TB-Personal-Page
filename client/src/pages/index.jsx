@@ -39,9 +39,8 @@ export default function Homepage() {
   return (
     <Layout>
       <SEO
-        title='Tibo Borsos'
+        title='Home page'
         description='I am Tibor Borsos, the creator and owner of BioBey, a consultancy specialising in training and supporting analytical labs, especially in the field of LC-MC bioanalysis. I offer expertise to laboratories of pharmaceutical companies, universities, start-ups and CROs.'
-        image=''
       />
       <section id='homePage'>
         <Hero />
