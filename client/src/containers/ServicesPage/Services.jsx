@@ -119,101 +119,88 @@ export default function Services() {
           }
         }
       }
-      backgroundImage: file(relativePath: { eq: "bg4.png" }) {
-        childImageSharp {
-          fluid(quality: 100, maxWidth: 1920) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
     }
   `);
 
   return (
     <>
-      <BackgroundImage
-        fluid={data.backgroundImage.childImageSharp.fluid}
-        fadeIn
-      >
-        <NewSection id='servicesSection'>
-          <ContainerBox>
-            <Titles>Services</Titles>
-            <ServicesContainer>
-              <ServiceBox>
-                <ImageContainer>
-                  <Img
-                    fluid={data.serviceMainEducation.childImageSharp.fluid}
-                    alt='Services: Laboratory'
-                  />
-                </ImageContainer>
-                <ServiceTitle>Scientific education</ServiceTitle>
+      <NewSection id='servicesSection'>
+        <ContainerBox>
+          <Titles>Services</Titles>
+          <ServicesContainer>
+            <ServiceBox>
+              <ImageContainer>
+                <Img
+                  fluid={data.serviceMainEducation.childImageSharp.fluid}
+                  alt='Services: Laboratory'
+                />
+              </ImageContainer>
+              <ServiceTitle>Scientific education</ServiceTitle>
 
-                <ServicePoint>
-                  <CheckMark />
-                  <ServiceContent>
-                    Training programmes: development and execution of tailored
-                    company trainings
-                  </ServiceContent>
-                </ServicePoint>
-                <ServicePoint>
-                  <CheckMark />
-                  <ServiceContent>
-                    Online trainings: learn and gain practical skills at your
-                    own pace, whenever you want. Test your knowledge before
-                    receiving a certificate
-                  </ServiceContent>
-                </ServicePoint>
-                <ServicePoint style={{ paddingBottom: '80px' }}>
-                  <CheckMark />
-                  <ServiceContent>
-                    Microsoft Excel and Word training: master your spreadsheets
-                    and reports, and learn the basics of macro writing
-                  </ServiceContent>
-                </ServicePoint>
-                <Link to='/service-edu' rel='noopener noreferrer'>
-                  <StyledButtonsWhite>Read more</StyledButtonsWhite>
-                </Link>
-              </ServiceBox>
+              <ServicePoint>
+                <CheckMark />
+                <ServiceContent>
+                  Training programmes: development and execution of tailored
+                  company trainings
+                </ServiceContent>
+              </ServicePoint>
+              <ServicePoint>
+                <CheckMark />
+                <ServiceContent>
+                  Online trainings: learn and gain practical skills at your own
+                  pace, whenever you want. Test your knowledge before receiving
+                  a certificate
+                </ServiceContent>
+              </ServicePoint>
+              <ServicePoint style={{ paddingBottom: '80px' }}>
+                <CheckMark />
+                <ServiceContent>
+                  Microsoft Excel and Word training: master your spreadsheets
+                  and reports, and learn the basics of macro writing
+                </ServiceContent>
+              </ServicePoint>
+              <Link to='/service-edu' rel='noopener noreferrer'>
+                <StyledButtonsWhite>Read more</StyledButtonsWhite>
+              </Link>
+            </ServiceBox>
 
-              <ServiceBox>
-                <ImageContainer>
-                  <Img
-                    fluid={data.serviceMainLaboratory.childImageSharp.fluid}
-                    alt='Services: Laboratory'
-                  />
-                </ImageContainer>
-                <ServiceTitle>Laboratory and regulatory</ServiceTitle>
+            <ServiceBox>
+              <ImageContainer>
+                <Img
+                  fluid={data.serviceMainLaboratory.childImageSharp.fluid}
+                  alt='Services: Laboratory'
+                />
+              </ImageContainer>
+              <ServiceTitle>Laboratory and regulatory</ServiceTitle>
 
-                <ServicePoint>
-                  <CheckMark />
-                  <ServiceContent>
-                    Providing remote or on-site expertise for GLP/GCP regulated
-                    bioanalytical studies
-                  </ServiceContent>
-                </ServicePoint>
-                <ServicePoint>
-                  <CheckMark />
-                  <ServiceContent>
-                    Scientific review of contracts, pricing, lab metrics and
-                    KPIs
-                  </ServiceContent>
-                </ServicePoint>
-                <ServicePoint>
-                  <CheckMark />
-                  <ServiceContent style={{ paddingBottom: '80px' }}>
-                    Process review and development: get effective with speeding
-                    up workflows. Drafting, reviewing and updating policies,
-                    SOPs, forms and study plan/report templates
-                  </ServiceContent>
-                </ServicePoint>
-                <Link to='/service-lab' rel='noopener noreferrer'>
-                  <StyledButtonsWhite>Read more</StyledButtonsWhite>
-                </Link>
-              </ServiceBox>
-            </ServicesContainer>
-          </ContainerBox>
-        </NewSection>
-      </BackgroundImage>
+              <ServicePoint>
+                <CheckMark />
+                <ServiceContent>
+                  Providing remote or on-site expertise for GLP/GCP regulated
+                  bioanalytical studies
+                </ServiceContent>
+              </ServicePoint>
+              <ServicePoint>
+                <CheckMark />
+                <ServiceContent>
+                  Scientific review of contracts, pricing, lab metrics and KPIs
+                </ServiceContent>
+              </ServicePoint>
+              <ServicePoint>
+                <CheckMark />
+                <ServiceContent style={{ paddingBottom: '80px' }}>
+                  Process review and development: get effective with speeding up
+                  workflows. Drafting, reviewing and updating policies, SOPs,
+                  forms and study plan/report templates
+                </ServiceContent>
+              </ServicePoint>
+              <Link to='/service-lab' rel='noopener noreferrer'>
+                <StyledButtonsWhite>Read more</StyledButtonsWhite>
+              </Link>
+            </ServiceBox>
+          </ServicesContainer>
+        </ContainerBox>
+      </NewSection>
     </>
   );
 }

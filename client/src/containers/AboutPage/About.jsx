@@ -11,7 +11,7 @@ import Img from 'gatsby-image';
 const AboutContainer = styled.div`
   display: flex;
 
-  @media only screen and (max-width: 730px) and (orientation: landscape){
+  @media only screen and (max-width: 730px) and (orientation: landscape) {
     display: inline;
   }
 
@@ -25,9 +25,9 @@ const ImageContainer = styled.div`
   width: 100%;
   flex: 1;
   margin-top: 3px;
-  box-shadow: rgba(0, 54, 166, 0.3) 0px 7px 29px 0px;
+  /*box-shadow: rgba(0, 54, 166, 0.3) 0px 7px 29px 0px;*/
 
-  @media only screen and (max-width: 730px) and (orientation: landscape){
+  @media only screen and (max-width: 730px) and (orientation: landscape) {
     width: 50%;
     margin: auto;
   }
@@ -36,7 +36,7 @@ const ImageContainer = styled.div`
     width: 100%;
     margin: 0;
   }
-`; 
+`;
 
 const AboutContent = styled.div`
   color: ${theme.black};
@@ -49,7 +49,7 @@ const AboutContent = styled.div`
     padding: 0 0 0 20px;
   }
 
-  @media only screen and (max-width: 730px) and (orientation: landscape){
+  @media only screen and (max-width: 730px) and (orientation: landscape) {
     margin-top: 30px;
     padding: 0;
   }
@@ -65,8 +65,7 @@ const StyledParagraph = styled.p`
 `;
 
 const StyledButtons = styled(Buttons)`
-
-  @media only screen and (max-width: 730px) and (orientation: landscape){
+  @media only screen and (max-width: 730px) and (orientation: landscape) {
     display: flex;
     margin: 30px auto 50px;
   }
@@ -78,38 +77,36 @@ const StyledButtons = styled(Buttons)`
 `;
 
 export default function About() {
-
   const data = useStaticQuery(graphql`
-        query {
-          about: file(relativePath: {eq: "about.jpg"}) {
-            childImageSharp {
-              fluid {
-                ...GatsbyImageSharpFluid
-              }
-            }
+    query {
+      about: file(relativePath: { eq: "ProfilePic6.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
           }
         }
-    ` )
+      }
+    }
+  `);
 
   return (
-    <section id="aboutSection">
-      <div> 
+    <section id='aboutSection'>
+      <div>
         <ContainerBox>
-        
           <Titles>About Me</Titles>
           <AboutContainer>
             <ImageContainer>
-              <Img 
+              <Img
                 fluid={data.about.childImageSharp.fluid}
-                alt="profile picture"
-              />  
+                alt='profile picture'
+              />
             </ImageContainer>
             <AboutContent>
               <StyledParagraph>
                 I am a chemist with over 13 years' experience in analytical
                 chemistry in the pharma and CRO industry. I have worked under
-                GMP, GLP and GC(L)P regulated areas, with a wide range
-                of instrumentation and studies.
+                GMP, GLP and GC(L)P regulated areas, with a wide range of
+                instrumentation and studies.
               </StyledParagraph>
               <StyledParagraph>
                 I have experience in PK/TK data management and was a user of
@@ -127,7 +124,7 @@ export default function About() {
                 content and hope you and your company will be able to make a
                 good use of it.
               </StyledParagraph>
-              <Link to="/about" rel="noopener noreferrer">
+              <Link to='/about' rel='noopener noreferrer'>
                 <StyledButtons>Read more</StyledButtons>
               </Link>
             </AboutContent>

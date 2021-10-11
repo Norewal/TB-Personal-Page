@@ -10,12 +10,10 @@ import { graphql, useStaticQuery } from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
 
 const BG = styled.div`
-  background-color: ${theme.darkblue};
-  /*background-image: url('https://www.transparenttextures.com/patterns/hexellence.png');*/
+  /*background-image: url('https://www.transparenttextures.com/patterns/hexellence.png'); */
 `;
 
 const BGContainer = styled.div`
-  background-color: ${theme.darkblue};
   max-width: 1040px;
   margin: auto;
 `;
@@ -98,7 +96,7 @@ export default function BioBey() {
   return (
     <BG>
       <section id='biobeySection'>
-        <BGContainer>
+        <BGContainer style={{ backgroundColor: `${theme.darkblue}` }}>
           <ContainerBox>
             <StyledTitle>
               What is the scope of
